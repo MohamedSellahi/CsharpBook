@@ -1,0 +1,6 @@
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\ClassAccessmodifiers\ClassAccessmodifiers\bin\Debug\ClassAccessmodifiers.exe.config
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\ClassAccessmodifiers\ClassAccessmodifiers\bin\Debug\ClassAccessmodifiers.exe
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\ClassAccessmodifiers\ClassAccessmodifiers\bin\Debug\ClassAccessmodifiers.pdb
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\ClassAccessmodifiers\ClassAccessmodifiers\obj\Debug\ClassAccessmodifiers.csprojResolveAssemblyReference.cache
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\ClassAccessmodifiers\ClassAccessmodifiers\obj\Debug\ClassAccessmodifiers.exe
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\ClassAccessmodifiers\ClassAccessmodifiers\obj\Debug\ClassAccessmodifiers.pdb

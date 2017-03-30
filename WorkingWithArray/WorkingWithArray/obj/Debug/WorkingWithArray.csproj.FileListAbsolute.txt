@@ -1,0 +1,6 @@
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\WorkingWithArray\WorkingWithArray\bin\Debug\WorkingWithArray.exe.config
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\WorkingWithArray\WorkingWithArray\bin\Debug\WorkingWithArray.exe
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\WorkingWithArray\WorkingWithArray\bin\Debug\WorkingWithArray.pdb
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\WorkingWithArray\WorkingWithArray\obj\Debug\WorkingWithArray.csprojResolveAssemblyReference.cache
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\WorkingWithArray\WorkingWithArray\obj\Debug\WorkingWithArray.exe
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\WorkingWithArray\WorkingWithArray\obj\Debug\WorkingWithArray.pdb

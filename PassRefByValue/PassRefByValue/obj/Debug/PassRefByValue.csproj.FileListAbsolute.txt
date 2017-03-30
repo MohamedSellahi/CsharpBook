@@ -1,0 +1,6 @@
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\PassRefByValue\PassRefByValue\bin\Debug\PassRefByValue.exe.config
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\PassRefByValue\PassRefByValue\bin\Debug\PassRefByValue.exe
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\PassRefByValue\PassRefByValue\bin\Debug\PassRefByValue.pdb
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\PassRefByValue\PassRefByValue\obj\Debug\PassRefByValue.csprojResolveAssemblyReference.cache
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\PassRefByValue\PassRefByValue\obj\Debug\PassRefByValue.exe
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\PassRefByValue\PassRefByValue\obj\Debug\PassRefByValue.pdb

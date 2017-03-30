@@ -1,0 +1,6 @@
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\Encapsulation00\Encapsulation00\bin\Debug\Encapsulation00.exe.config
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\Encapsulation00\Encapsulation00\bin\Debug\Encapsulation00.exe
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\Encapsulation00\Encapsulation00\bin\Debug\Encapsulation00.pdb
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\Encapsulation00\Encapsulation00\obj\Debug\Encapsulation00.csprojResolveAssemblyReference.cache
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\Encapsulation00\Encapsulation00\obj\Debug\Encapsulation00.exe
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\Encapsulation00\Encapsulation00\obj\Debug\Encapsulation00.pdb

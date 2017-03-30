@@ -1,0 +1,6 @@
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\StaticMemeber\StaticMemeber\bin\Debug\StaticMemeber.exe.config
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\StaticMemeber\StaticMemeber\bin\Debug\StaticMemeber.exe
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\StaticMemeber\StaticMemeber\bin\Debug\StaticMemeber.pdb
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\StaticMemeber\StaticMemeber\obj\Debug\StaticMemeber.csprojResolveAssemblyReference.cache
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\StaticMemeber\StaticMemeber\obj\Debug\StaticMemeber.exe
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\StaticMemeber\StaticMemeber\obj\Debug\StaticMemeber.pdb

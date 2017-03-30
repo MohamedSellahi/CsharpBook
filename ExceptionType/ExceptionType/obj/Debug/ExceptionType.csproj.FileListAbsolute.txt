@@ -1,0 +1,6 @@
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\ExceptionType\ExceptionType\bin\Debug\ExceptionType.exe.config
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\ExceptionType\ExceptionType\bin\Debug\ExceptionType.exe
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\ExceptionType\ExceptionType\bin\Debug\ExceptionType.pdb
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\ExceptionType\ExceptionType\obj\Debug\ExceptionType.csprojResolveAssemblyReference.cache
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\ExceptionType\ExceptionType\obj\Debug\ExceptionType.exe
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\ExceptionType\ExceptionType\obj\Debug\ExceptionType.pdb

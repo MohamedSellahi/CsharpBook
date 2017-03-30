@@ -1,0 +1,6 @@
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\Interface00\Interface00\bin\Debug\Interface00.exe.config
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\Interface00\Interface00\bin\Debug\Interface00.exe
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\Interface00\Interface00\bin\Debug\Interface00.pdb
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\Interface00\Interface00\obj\Debug\Interface00.csprojResolveAssemblyReference.cache
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\Interface00\Interface00\obj\Debug\Interface00.exe
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\Interface00\Interface00\obj\Debug\Interface00.pdb

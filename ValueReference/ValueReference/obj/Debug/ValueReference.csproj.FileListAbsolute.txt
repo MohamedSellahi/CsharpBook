@@ -1,0 +1,6 @@
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\ValueReference\ValueReference\bin\Debug\ValueReference.exe.config
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\ValueReference\ValueReference\bin\Debug\ValueReference.exe
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\ValueReference\ValueReference\bin\Debug\ValueReference.pdb
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\ValueReference\ValueReference\obj\Debug\ValueReference.csprojResolveAssemblyReference.cache
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\ValueReference\ValueReference\obj\Debug\ValueReference.exe
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\ValueReference\ValueReference\obj\Debug\ValueReference.pdb

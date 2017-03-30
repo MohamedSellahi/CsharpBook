@@ -1,0 +1,6 @@
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\WorkingWithEnum\WorkingWithEnum\bin\Debug\WorkingWithEnum.exe.config
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\WorkingWithEnum\WorkingWithEnum\bin\Debug\WorkingWithEnum.exe
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\WorkingWithEnum\WorkingWithEnum\bin\Debug\WorkingWithEnum.pdb
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\WorkingWithEnum\WorkingWithEnum\obj\Debug\WorkingWithEnum.csprojResolveAssemblyReference.cache
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\WorkingWithEnum\WorkingWithEnum\obj\Debug\WorkingWithEnum.exe
+C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\WorkingWithEnum\WorkingWithEnum\obj\Debug\WorkingWithEnum.pdb
