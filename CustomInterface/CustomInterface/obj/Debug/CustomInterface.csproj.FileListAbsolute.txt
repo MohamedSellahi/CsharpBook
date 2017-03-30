@@ -4,3 +4,9 @@ C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\CustomInte
 C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\CustomInterface\CustomInterface\obj\Debug\CustomInterface.csprojResolveAssemblyReference.cache
 C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\CustomInterface\CustomInterface\obj\Debug\CustomInterface.exe
 C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\CustomInterface\CustomInterface\obj\Debug\CustomInterface.pdb
+C:\Users\Mohamed\Source\Repos\CsharpBook\CustomInterface\CustomInterface\bin\Debug\CustomInterface.exe.config
+C:\Users\Mohamed\Source\Repos\CsharpBook\CustomInterface\CustomInterface\obj\Debug\CustomInterface.exe
+C:\Users\Mohamed\Source\Repos\CsharpBook\CustomInterface\CustomInterface\obj\Debug\CustomInterface.pdb
+C:\Users\Mohamed\Source\Repos\CsharpBook\CustomInterface\CustomInterface\bin\Debug\CustomInterface.exe
+C:\Users\Mohamed\Source\Repos\CsharpBook\CustomInterface\CustomInterface\bin\Debug\CustomInterface.pdb
+C:\Users\Mohamed\Source\Repos\CsharpBook\CustomInterface\CustomInterface\obj\Debug\CustomInterface.csprojResolveAssemblyReference.cache

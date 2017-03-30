@@ -1,0 +1,6 @@
+C:\Users\Mohamed\Documents\Visual Studio 2015\Projects\ExercisesCsharp-\CSharpBook\InterfaceNameClash\InterfaceNameClash\bin\Debug\InterfaceNameClash.exe.config
+C:\Users\Mohamed\Documents\Visual Studio 2015\Projects\ExercisesCsharp-\CSharpBook\InterfaceNameClash\InterfaceNameClash\bin\Debug\InterfaceNameClash.exe
+C:\Users\Mohamed\Documents\Visual Studio 2015\Projects\ExercisesCsharp-\CSharpBook\InterfaceNameClash\InterfaceNameClash\bin\Debug\InterfaceNameClash.pdb
+C:\Users\Mohamed\Documents\Visual Studio 2015\Projects\ExercisesCsharp-\CSharpBook\InterfaceNameClash\InterfaceNameClash\obj\Debug\InterfaceNameClash.csprojResolveAssemblyReference.cache
+C:\Users\Mohamed\Documents\Visual Studio 2015\Projects\ExercisesCsharp-\CSharpBook\InterfaceNameClash\InterfaceNameClash\obj\Debug\InterfaceNameClash.exe
+C:\Users\Mohamed\Documents\Visual Studio 2015\Projects\ExercisesCsharp-\CSharpBook\InterfaceNameClash\InterfaceNameClash\obj\Debug\InterfaceNameClash.pdb

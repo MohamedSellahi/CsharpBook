@@ -1,0 +1,6 @@
+C:\Users\Mohamed\Documents\Visual Studio 2015\Projects\ExercisesCsharp-\CSharpBook\MIInterfaceHierarchy\MIInterfaceHierarchy\bin\Debug\MIInterfaceHierarchy.exe.config
+C:\Users\Mohamed\Documents\Visual Studio 2015\Projects\ExercisesCsharp-\CSharpBook\MIInterfaceHierarchy\MIInterfaceHierarchy\bin\Debug\MIInterfaceHierarchy.exe
+C:\Users\Mohamed\Documents\Visual Studio 2015\Projects\ExercisesCsharp-\CSharpBook\MIInterfaceHierarchy\MIInterfaceHierarchy\bin\Debug\MIInterfaceHierarchy.pdb
+C:\Users\Mohamed\Documents\Visual Studio 2015\Projects\ExercisesCsharp-\CSharpBook\MIInterfaceHierarchy\MIInterfaceHierarchy\obj\Debug\MIInterfaceHierarchy.csprojResolveAssemblyReference.cache
+C:\Users\Mohamed\Documents\Visual Studio 2015\Projects\ExercisesCsharp-\CSharpBook\MIInterfaceHierarchy\MIInterfaceHierarchy\obj\Debug\MIInterfaceHierarchy.exe
+C:\Users\Mohamed\Documents\Visual Studio 2015\Projects\ExercisesCsharp-\CSharpBook\MIInterfaceHierarchy\MIInterfaceHierarchy\obj\Debug\MIInterfaceHierarchy.pdb
