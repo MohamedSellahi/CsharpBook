@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace CustomEnumerator {
-  internal class Garage:IEnumerable {
+  internal class Garage : IEnumerable {
     private Car[] _carArray = new Car[4];
 
     public Garage() {
@@ -15,6 +15,13 @@ namespace CustomEnumerator {
       _carArray[2] = new Car("Zippy", 30);
       _carArray[3] = new Car("Fred", 30);
     }
+    
+    // the IEnumerator can be hidden using explicit interface 
+    // implementation: 
+
+    //IEnumerator IEnumerable.GetEnumerator() {
+    //  return _carArray.GetEnumerator();
+    //}
 
     public IEnumerator GetEnumerator() {
       // returns the array objects IEnumerator
