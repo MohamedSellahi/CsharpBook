@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,9 +21,22 @@ namespace ComparableCar {
         Console.WriteLine(item);
       }
       try {
-        Console.WriteLine("\n sorted cars ");
+        Console.WriteLine("\nSorted cars ");
         Array.Sort(myCars);
         foreach(var item in myCars) {
+          Console.WriteLine(item);
+        }
+
+        // sort by petName
+        Console.WriteLine("\nSorting by Name");
+        Array.Sort(myCars, new PetNameComparer());
+        foreach (Car item in myCars) {
+          Console.WriteLine(item);
+        }
+
+        Console.WriteLine("\nSorting by Name using Custom propertie");
+        Array.Sort(myCars, Car.SortByName);
+        foreach (var item in myCars) {
           Console.WriteLine(item);
         }
 

@@ -47,6 +47,8 @@
     <Compile Include="CarIsDeadException.cs" />
     <Compile Include="CarIsDeadException2.cs" />
     <Compile Include="CarIsDeadException3.cs.cs" />
+    <Compile Include="CarIDComparer.cs" />
+    <Compile Include="PetNameComparer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Radio.cs" />

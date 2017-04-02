@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ComparableCar {
-  class Car: IComparable {
+  class Car : IComparable {
     public const int MaxSpeed = 100;
     public int CurrentSpeed { get; set; }
     public string Petname { get; set; }
@@ -42,10 +43,6 @@ namespace ComparableCar {
 
           ex.HelpLink = "http://www.nowhere.no";
 
-
-          
-
-
           throw ex;
 
         }
@@ -59,7 +56,7 @@ namespace ComparableCar {
     }
 
     public override string ToString() {
-      return "Car Model: " + Petname;
+      return String.Format("{0,-10}{1,10} {2,10} {3,10}", "Car Model: ", Petname, "ID: ", CarID);
     }
 
 
@@ -76,13 +73,26 @@ namespace ComparableCar {
     //  else {
     //    throw new ArgumentException("Parameter is not a car");
     //  }
-      
+
     //}
     public int CompareTo(object obj) {
-      if(obj is Car)
+      if (obj is Car)
         return this.CarID.CompareTo(((Car)obj).CarID);
       else
         throw new ArgumentException("Parameter is not a car");
+    }
+
+    // Property to return a petName Comparer 
+    static public IComparer SortByName {
+      get { return (IComparer)new PetNameComparer(); } // the cast is redundant 
+    }
+
+    static public IComparer SortByID {
+      get {
+        return (IComparer)new CarIDComparer();
+      }
+
+
     }
   }
 }
