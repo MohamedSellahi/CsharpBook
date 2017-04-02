@@ -21,9 +21,6 @@ namespace CustomEnumerator {
       Console.WriteLine("{0} is going {1} kMh", myCar.Petname, myCar.CurrentSpeed);
 
 
-
-
-
     }
   }
 }

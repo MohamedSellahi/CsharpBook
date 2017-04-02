@@ -21,6 +21,5 @@ namespace CustomEnumerator {
       return _carArray.GetEnumerator();
     }
 
-
   }
 }

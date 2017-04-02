@@ -35,28 +35,16 @@ namespace CustomEnumerator {
           CarIsDeadException ex = new CarIsDeadException(string.Format("{0} has overheated", Petname), "You have a lead foot.", DateTime.Now);
 
           ex.HelpLink = "http://www.nowhere.no";
-
-
-          
-
-
           throw ex;
-
         }
         else {
           Console.WriteLine("==> CurrentSpeed = {0}", CurrentSpeed);
         }
       }
-
-
-
     }
 
     public override string ToString() {
       return "Car Model: " + Petname;
     }
-
-
-
   }
 }

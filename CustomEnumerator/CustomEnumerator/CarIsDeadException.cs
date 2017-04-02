@@ -17,18 +17,11 @@ namespace CustomEnumerator {
       CauseError = cause;
       ErrorTimeStamp = time; 
     }
-
-
     // overiding the exception Message property
     public override string Message {
       get {
         return string.Format("Car Error Message: {0}", _messageDetails);
       }
     }
-
-
-
-
-
   }
 }

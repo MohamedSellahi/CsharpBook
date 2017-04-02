@@ -8,9 +8,5 @@ namespace CustomEnumerator {
       OnOff = state;
     }
 
-
-
-
-
   }
 }
