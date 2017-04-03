@@ -32,7 +32,27 @@ namespace IssuesWithNonGenericCollections {
       foreach (Person item in myPeople) {
         Console.WriteLine(item);
       }
+
+      // A first look at generics 
+      Console.WriteLine("\n***** Fun With generics *****\n");
+      List<Person> morePeople = new List<Person>();
+      morePeople.Add(new Person("Frank", "Black", 50));
+      Console.WriteLine(morePeople[0]);
+
+      //
+      List<int> moreInts = new List<int>();
+      moreInts.Add(10);
+      moreInts.Add(2);
+      int sum = moreInts.Sum();
+      Console.WriteLine(sum);
+      
+     
+
     }
+
+
+
+
 
     static void SimpleBoxUnboxOperation() {
       // Make a value type (int) variable 
