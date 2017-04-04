@@ -31,7 +31,7 @@ namespace CarDelegate {
     public delegate void CarEngineHandler(string msgForCaller);
 
     // 2) define a member variable for this delegate;
-    private CarEngineHandler listOfhandlers = null;
+    public CarEngineHandler listOfhandlers = null;
 
     // 3) Add registration function for the caller (helper function to add method to be called );
     public void RegisterWithCarEngine(CarEngineHandler methodtoCall) {

@@ -16,7 +16,11 @@ namespace CarDelegate {
 
       c1.RegisterWithCarEngine(handler1);
       c1.RegisterWithCarEngine(handler2);
-      
+
+      // using group conversion syntax 
+      c1.RegisterWithCarEngine(OncarEngineEventV3);  // short cut without explicitly constructing a new Car.CarEngineHandler
+     
+
 
       // speed Up to trigger the events 
       Console.WriteLine("***** Speeding up *****");
