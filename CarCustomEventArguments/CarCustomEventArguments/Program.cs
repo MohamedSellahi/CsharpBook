@@ -16,33 +16,38 @@ namespace CarCustomEventArguments {
       c1.AboutToBlow2 += C1_AboutToBlow2;
       // or 
       EventHandler<CarEventArgs> d = new EventHandler<CarEventArgs>(C1_Exploded2);
-      c1.Exploded2 += d;
+      c1.Exploaded2 += d;
 
       for (int i = 0; i < 10; i++) {
         c1.Accelerate(20);
       }
+      
+
+
 
 
 
     }
 
+
+    #region Event Handlers 
     private static void C1_Exploded2(object sender, CarEventArgs e) {
-      if(sender is Car) {
+      if (sender is Car) {
         Car c = (Car)sender;
-        Console.WriteLine("CRITICAL MESSAGE FROM {0}: {1}", c.PetName,e._message);
+        Console.WriteLine("CRITICAL MESSAGE FROM {0}: {1}", c.PetName, e._message);
       }
     }
 
     private static void C1_AboutToBlow2(object sender, CarEventArgs e) {
-      if(sender is Car) {
+      if (sender is Car) {
         Car c = (Car)sender;
-        Console.WriteLine("CRITICAL MESSAGE FROM {0}: {1}", c.PetName,e._message);
+        Console.WriteLine("CRITICAL MESSAGE FROM {0}: {1}", c.PetName, e._message);
       }
 
     }
 
     private static void Car_AboutToBlow(object sender, CarEventArgs e) {
-      if(sender is Car) {
+      if (sender is Car) {
         Car c = (Car)sender;
         Console.WriteLine("critical message from {0}: {1}", c.PetName, e._message);
 
@@ -50,5 +55,11 @@ namespace CarCustomEventArguments {
 
 
     }
+
+
+
+    #endregion
+
+
   }
 }

@@ -28,22 +28,28 @@ namespace CarCustomEventArguments {
     // in relation with the engine health
     // this delegate works in conjunction with the Cars events 
     public delegate void CarEngineHandler(object sender, CarEventArgs e);
-   
+    public delegate void MyHandler(int x);
+
+
+    
 
 
     // this car can send this events 
-    public event CarEngineHandler Exploded;
+    public event CarEngineHandler Exploaded;
     public event CarEngineHandler AboutToBlow;
+
+
+
     // Using th egneric event handler 
-    public event EventHandler<CarEventArgs> Exploded2;
+    public event EventHandler<CarEventArgs> Exploaded2;
     public event EventHandler<CarEventArgs> AboutToBlow2;
 
     public void Accelerate(int delta) {
       // if car is dead, fire exploided event ; 
       if (CarIsDead) {
-        if (Exploded != null) {
-          Exploded(this, new CarEventArgs("Sorry this car is dead..."));
-          Exploded2(this, new CarEventArgs("SORRY THIS CAR IS DEAD..."));
+        if (Exploaded != null) {
+          Exploaded(this, new CarEventArgs("Sorry this car is dead..."));
+          Exploaded2(this, new CarEventArgs("SORRY THIS CAR IS DEAD..."));
         }
       }
       else {
