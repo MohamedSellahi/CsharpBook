@@ -36,8 +36,8 @@ namespace MorpionGame {
     private char Player1Char = 'X';
     private char Player2Char = 'O';
 
-    private int _squareWidth = 3; // TODO Add constructor that intiates this properties 
-    private int _squareHight = 1;
+    private int _squareWidth ; // TODO Add constructor that intiates this properties 
+    private int _squareHight ;
 
     #endregion
 
@@ -49,6 +49,8 @@ namespace MorpionGame {
       NRows = 3;
       NCollumns = 3;
       _board = new Square[NRows, NCollumns]; // Squares will be set to there default values 
+      _squareWidth = 4;
+      _squareHight = 1;
     }
     /// <summary>
     /// Creates a Morpion Board with custom size;
@@ -61,6 +63,8 @@ namespace MorpionGame {
       NCollumns = ncolumns;
       _board = new Square[NRows, NCollumns]; // Squares will be set to there default values 
       InitializeBoard(_board, SquareOccupation.Empty);
+      _squareWidth = 4;
+      _squareHight = 1;
     }
 
     /// <summary>
@@ -106,8 +110,8 @@ namespace MorpionGame {
       //  X | X | X |
       // ---+---+---+
       //
-      StringBuilder SeparationLine = new StringBuilder(NCollumns * 4);
-      StringBuilder PlayLine = new StringBuilder(NCollumns + 4);
+      StringBuilder SeparationLine = new StringBuilder(NCollumns * this._squareWidth);
+      StringBuilder PlayLine = new StringBuilder(NCollumns + this._squareWidth);
 
       //// buildin the separation lines 
       //for (int iCol = 0; iCol < NCollumns; iCol++) {
@@ -119,7 +123,7 @@ namespace MorpionGame {
       for (int irow = 0; irow < NRows; ++irow) {
         for (int icol = 0; icol < NCollumns; ++icol) {
           SeparationLine.Append("---+");
-          PlayLine.Append(' ').Append(SquareToCharonBoard(_board[irow, icol])).Append(' ').Append('|');
+          PlayLine.Append(' ').Append(SquareToCharOnBoard(_board[irow, icol])).Append(' ').Append('|');
         }
         Console.WriteLine(SeparationLine.ToString());
         Console.WriteLine(PlayLine.ToString());
@@ -145,7 +149,7 @@ namespace MorpionGame {
     /// <param name="square"></param>
     /// <returns></returns>
 
-    private char SquareToCharonBoard(Square square) {
+    private char SquareToCharOnBoard(Square square) {
       switch (square.Occupation) {
         case SquareOccupation.Empty:
           return ' ';
@@ -156,7 +160,6 @@ namespace MorpionGame {
         default:
           return ' ';  // this line should never be reached 
       }
-
 
     }
 
