@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace MorpionGame {
   class HumanPlayer: Player {
 
-    static private int NbPlayers;
+    
 
     private int _upKey;
     private int _downKey;
@@ -90,18 +90,22 @@ namespace MorpionGame {
           }
           else if (userInput == RightKey) {
             // try move up 
+            MoveRight(boardevents.Mboard);
           }
           else if (userInput == LeftKey) {
             // try mode left 
+            MoveLeft(boardevents.Mboard);
           }
           else if (userInput == EnterKey) {
             // try place sumbole in the corresponding sqaure
+            if (PressEnter(boardevents.Mboard))// if success 
+              break;
+
           }
           else {
             // play error message 
           }
         } while (true);
-        
         
       }
       catch (InvalidOperationException ve) {
@@ -117,6 +121,40 @@ namespace MorpionGame {
       return false;
     }
 
+    private bool PressEnter(Morpion mboard) {
+      // try to place 'O' or 'X' in the corresponding position 
+      // if possible , other wise it recovers the previous, and 
+      // places the curesur in it 
+      if(mboard)
+
+
+      return false;
+    }
+
+    private void MoveLeft(Morpion mboard) {
+      // save previous pos of the current player
+      PrevXpos = mboard.XCursor;
+      PrevYpos = mboard.YCursor;
+
+      if (--mboard.XCursor < 0) { // wrap arround
+        mboard.XCursor = mboard.NCollumns - 1;
+      }
+      int xcurr = mboard.XCursor * mboard.SqWidth + 1;
+
+      Console.SetCursorPosition(mboard.XCursor * mboard.SqWidth + 1, mboard.YCursor * 2 + 1);
+    }
+
+    private void MoveRight(Morpion mboard) {
+      // save previous pos of the current player
+      PrevXpos = mboard.XCursor;
+      PrevYpos = mboard.YCursor;
+
+      if (++mboard.XCursor > mboard.NCollumns - 1) { // wrap arround
+        mboard.XCursor = 0;
+      }
+      Console.SetCursorPosition(mboard.XCursor * mboard.SqWidth + 1 , mboard.YCursor * 2 + 1);
+    }
+
     private void MoveDown(Morpion mboard) {
       // save previous pos of the current player
       PrevXpos = mboard.XCursor;
@@ -125,7 +163,9 @@ namespace MorpionGame {
       if (--mboard.YCursor < 0) { // wrap arround
         mboard.YCursor = mboard.NRows - 1;
       }
-      Console.SetCursorPosition(mboard.XCursor, mboard.YCursor * 2 + 1);
+      Console.SetCursorPosition(mboard.XCursor * mboard.SqWidth + 1, mboard.YCursor * 2 + 1);
+
+
     }
 
     private void MoveUp(Morpion mboard) {
@@ -136,7 +176,7 @@ namespace MorpionGame {
       if (++mboard.YCursor > mboard.NRows - 1) { // wrap arround
         mboard.YCursor = 0;
       }
-      Console.SetCursorPosition(mboard.XCursor, mboard.YCursor *2 + 1);
+      Console.SetCursorPosition(mboard.XCursor * mboard.SqWidth + 1, mboard.YCursor *2 + 1);
 
     }
 

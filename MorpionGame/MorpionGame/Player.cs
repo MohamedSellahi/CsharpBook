@@ -3,6 +3,8 @@
 namespace MorpionGame {
 
   abstract public class Player: IPlay {
+
+    static protected int NbPlayers;
     public string Name { get; set; }
 
     private char _symbol;
@@ -21,7 +23,20 @@ namespace MorpionGame {
       }
     }
 
+    Square _sq;  // define the state if the square if 
+                 // for a given player 
 
+    private SquareOccupation _playerOccupation;
+
+    public SquareOccupation POccupation {
+      get { return _playerOccupation; }
+      private set { _playerOccupation = value; }
+    }
+
+    SquareOccupation playerOccupation; 
+
+
+    // TODO : to be implemented 
     public Player() { }
     /// <summary>
     /// Initiates a player 
@@ -31,6 +46,10 @@ namespace MorpionGame {
     public Player(string name, char side) {
       Name = name;
       Symbol = side;
+      if (side == 'X')
+        POccupation = SquareOccupation.Player1;
+      else
+        POccupation = SquareOccupation.Player2;
     }
 
     public abstract bool playOnMyTurn(object source, MorpionEventArgs e);

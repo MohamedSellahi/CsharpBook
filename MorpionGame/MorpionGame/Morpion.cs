@@ -4,6 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
+// P1 = 'X'
+// P2 = 'O'
 namespace MorpionGame {
   /// <summary>
   /// Class Morpion
@@ -43,8 +46,8 @@ namespace MorpionGame {
     private int _squareWidth ; // TODO Add constructor that intiates this properties 
     private int _squareHight ;
 
-    public int SqWidth { get;}
-    public int SqHight { get;}
+    public int SqWidth { get { return _squareWidth; }}
+    public int SqHight { get { return _squareHight; } }
 
     /// <summary>
     /// used to save the origin of the drawing of the board.
@@ -130,6 +133,8 @@ namespace MorpionGame {
       NCollumns = ncolumns;
       _board = new Square[NRows, NCollumns]; // Squares will be set to there default values 
       InitializeBoard(_board, defaultfill);
+      _squareWidth = 4;
+      _squareHight = 1;
       _player1 = new HumanPlayer("No-Name", 'X');  // default values 
       _player2 = new PCPlayer('O');
 
@@ -203,13 +208,14 @@ namespace MorpionGame {
       //  SeparationLine.Append("--+");
       //}
 
-
+      Console.Clear();
       // drawing the lines 
       for (int irow = 0; irow < NRows; ++irow) {
         for (int icol = 0; icol < NCollumns; ++icol) {
           SeparationLine.Append("---+");
           PlayLine.Append(' ').Append(SquareToCharOnBoard(_board[irow, icol])).Append(' ').Append('|');
         }
+        
        
         Console.WriteLine(SeparationLine.ToString());
         Console.WriteLine(PlayLine.ToString());
@@ -243,7 +249,7 @@ namespace MorpionGame {
           return ' ';
         case SquareOccupation.Player1:
           return Player1Char;
-        case SquareOccupation.Plauer2:
+        case SquareOccupation.Player2:
           return Player2Char;
         default:
           return ' ';  // this line should never be reached 
@@ -263,6 +269,30 @@ namespace MorpionGame {
       if (TurnForPlayer2 != null)
         TurnForPlayer2(this, new MorpionEventArgs(this));
     }
+
+
+    /// <summary>
+    /// Tries to put player movement in the square with coordiantes 
+    /// xpos, ypos
+    /// </summary>
+    /// <param name="xpos"></param>
+    /// <param name="ypos"></param>
+    /// <param name="p"></param>
+    /// <returns></returns>
+    public bool PlacePlayerMovement(int xpos, int ypos, Player p) {
+      if (xpos < 0 || xpos > NCollumns - 1 || ypos < 0 || ypos > NRows - 1) {
+        return false;
+      }
+      else {
+        if (_board[xpos, ypos].Occupation == SquareOccupation.Empty) {
+          _board[xpos, ypos].Occupation = p.POccupation;
+          return true;
+        }          
+        else
+          return false;
+      }
+
+    } 
 
 
 

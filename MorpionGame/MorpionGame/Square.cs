@@ -11,6 +11,10 @@ namespace MorpionGame {
     private SquareBackGroundColor _backGroundColor;
     private SquareTextColor _textColor;
 
+    private char _content;
+
+
+
 
 
     #region Properties
@@ -26,7 +30,7 @@ namespace MorpionGame {
 
     #endregion
 
-    #region Copnstructors
+    #region Constructors
     /// <summary>
     /// Default costructor 
     /// 
@@ -57,7 +61,7 @@ namespace MorpionGame {
   public enum SquareOccupation {
     Empty,
     Player1,
-    Plauer2
+    Player2
   }
 
   /// <summary>

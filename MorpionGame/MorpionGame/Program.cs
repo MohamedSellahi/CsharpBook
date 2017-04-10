@@ -4,11 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+// Player one 
+
 namespace MorpionGame {
   class Program {
     static void Main(string[] args) {
 
-      Morpion m = new Morpion(10, 10, SquareOccupation.Empty);
+      Morpion m = new Morpion(15, 10, SquareOccupation.Empty);
       m.XOrig = Console.CursorLeft;
       m.YOrig = Console.CursorTop;
       m.DrawMorpionBoard();
