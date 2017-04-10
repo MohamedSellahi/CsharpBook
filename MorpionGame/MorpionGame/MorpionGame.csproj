@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0C527400-2D15-45D8-AE08-4921BFD018EF}</ProjectGuid>
+    <ProjectGuid>{7A45A9D2-EB76-4F17-83AD-E0097D6C336E}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MorpionGame</RootNamespace>
@@ -43,7 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HumanPlayer.cs" />
+    <Compile Include="IPlay.cs" />
     <Compile Include="Morpion.cs" />
+    <Compile Include="MorpionEventArgs.cs" />
+    <Compile Include="PCPlayer.cs" />
+    <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Square.cs" />
