@@ -98,8 +98,17 @@ namespace MorpionGame {
           }
           else if (userInput == EnterKey) {
             // try place sumbole in the corresponding sqaure
-            if (PressEnter(boardevents.Mboard))// if success
-              boardevents.Mboard.DrawMorpionBoard(); 
+            if (PressEnter(boardevents.Mboard)) {// if success
+              --boardevents.Mboard.LeftMovements;
+
+              boardevents.Mboard.DrawMorpionBoard();
+              if (this.POccupation == SquareOccupation.Player1)
+                boardevents.Mboard.WhichTurn = TurnIsFor.player2;
+              else {
+                boardevents.Mboard.WhichTurn = TurnIsFor.player1;
+              }
+              break;
+            }
              
           }
           else {

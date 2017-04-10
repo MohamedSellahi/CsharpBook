@@ -18,13 +18,18 @@ namespace MorpionGame {
       //m.CallPlayer2();
 
 
-      Morpion m2 = new Morpion(5, 5, SquareOccupation.Empty, new HumanPlayer("Player1", 'X'),
-                                                              new PCPlayer('O'));
+      Morpion m2 = new Morpion(2, 2, SquareOccupation.Empty, new HumanPlayer("Player1", 'X'),
+                                                             new HumanPlayer("Player2",'O'));
       m2.XOrig = Console.CursorLeft;
       m2.YOrig = Console.CursorTop;
       m2.DrawMorpionBoard();
-      m2.CallPlayer1();
-      m2.CallPlayer2();
+
+      while (m2.LeftMovements > 0) {
+        m2.CallPlayer2();
+        m2.CallPlayer1();
+      }
+
+      Console.WriteLine("game over ");
 
       //m2.Xorig = Console.CursorLeft;
       //m2.YOrig = Console.CursorTop;
@@ -34,16 +39,16 @@ namespace MorpionGame {
 
 
 
-      int bottomX = Console.CursorLeft;
-      int bottomY = Console.CursorTop;
-      //Console.SetCursorPosition(m2.Xorig + 1, m2.YOrig + 1);
-      //Console.WriteLine("O");
+     // int bottomX = Console.CursorLeft;
+     // int bottomY = Console.CursorTop;
+     // //Console.SetCursorPosition(m2.Xorig + 1, m2.YOrig + 1);
+     // //Console.WriteLine("O");
 
 
-     // Console.SetCursorPosition(m.XOrig + 1, m.YOrig + 1);
-      Console.ReadLine();
-      Console.WriteLine("O");
-      Console.SetCursorPosition(bottomX, bottomY);
+     //// Console.SetCursorPosition(m.XOrig + 1, m.YOrig + 1);
+     // Console.ReadLine();
+     // Console.WriteLine("O");
+     // Console.SetCursorPosition(bottomX, bottomY);
 
     }
 

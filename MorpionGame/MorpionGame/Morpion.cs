@@ -38,6 +38,16 @@ namespace MorpionGame {
 
     private Player _player1;
     private Player _player2;
+    /// <summary>
+    /// Represents the number of empty places
+    /// left on the board 
+    /// </summary>
+    private int _nbMeftmovements;
+
+    public int LeftMovements {
+      get { return _nbMeftmovements; }
+      set { _nbMeftmovements = value; }
+    }
 
 
 
@@ -79,7 +89,13 @@ namespace MorpionGame {
     public event PlayOnMyTurnEventHandler TurnForPlayer1;
     public event PlayOnMyTurnEventHandler TurnForPlayer2;
 
-    TurnIsFor TurnIsFor; 
+    private TurnIsFor _turnIsFor;
+
+    public TurnIsFor WhichTurn {
+      get { return _turnIsFor; }
+      set { _turnIsFor = value; }
+    }
+
 
     #endregion
 
@@ -93,6 +109,10 @@ namespace MorpionGame {
       _board = new Square[NRows, NCollumns]; // Squares will be set to there default values 
       _squareWidth = 4;
       _squareHight = 1;
+      LeftMovements = NRows * NCollumns;
+      WhichTurn = TurnIsFor.player1;
+
+
     }
     /// <summary>
     /// Creates a Morpion Board with custom size;
@@ -107,6 +127,8 @@ namespace MorpionGame {
       InitializeBoard(_board, SquareOccupation.Empty);
       _squareWidth = 4;
       _squareHight = 1;
+      LeftMovements = NRows * NCollumns;
+
       _player1 = new HumanPlayer("No-Name", 'X');  // default values 
       _player2 = new PCPlayer('O');
 
@@ -116,7 +138,7 @@ namespace MorpionGame {
       Player1Char = _player1.Symbol;
       Player2Char = _player2.Symbol;
 
-      TurnIsFor = TurnIsFor.player1;
+      WhichTurn = TurnIsFor.player1;
       XCursor = NCollumns / 2;
       YCursor = NRows / 2;
 
@@ -132,6 +154,8 @@ namespace MorpionGame {
       NRows = nrows;
       NCollumns = ncolumns;
       _board = new Square[NRows, NCollumns]; // Squares will be set to there default values 
+      LeftMovements = NRows * NCollumns;
+
       InitializeBoard(_board, defaultfill);
       _squareWidth = 4;
       _squareHight = 1;
@@ -144,7 +168,7 @@ namespace MorpionGame {
       Player1Char = _player1.Symbol;
       Player2Char = _player2.Symbol;
 
-      TurnIsFor = TurnIsFor.player1; // we start by player 1
+      WhichTurn = TurnIsFor.player1; // we start by player 1
       XCursor = NCollumns / 2;
       YCursor = NRows / 2;
     }
@@ -154,6 +178,8 @@ namespace MorpionGame {
       NCollumns = ncolumns;
       _board = new Square[NRows, NCollumns]; // Squares will be set to there default values 
       InitializeBoard(_board, defaultfill);
+      LeftMovements = NRows * NCollumns;
+
       _squareWidth = 4;
       _squareHight = 1;
       _player1 = p1;
@@ -166,7 +192,7 @@ namespace MorpionGame {
       Player1Char = _player1.Symbol;
       Player2Char = _player2.Symbol;
 
-      TurnIsFor = TurnIsFor.player1;
+      WhichTurn = TurnIsFor.player1;
       XCursor = NCollumns / 2;
       YCursor = NRows / 2;
     }
@@ -211,6 +237,7 @@ namespace MorpionGame {
       //}
 
       Console.Clear();
+      Console.WriteLine("Left moves {0}", LeftMovements);
       // drawing the lines 
       for (int irow = 0; irow < NRows; ++irow) {
         for (int icol = 0; icol < NCollumns; ++icol) {
@@ -313,7 +340,7 @@ namespace MorpionGame {
 
   }
 
-  enum TurnIsFor {
+  public enum TurnIsFor {
     player1,
     player2
   }
