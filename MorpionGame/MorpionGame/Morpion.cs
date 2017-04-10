@@ -154,6 +154,8 @@ namespace MorpionGame {
       NCollumns = ncolumns;
       _board = new Square[NRows, NCollumns]; // Squares will be set to there default values 
       InitializeBoard(_board, defaultfill);
+      _squareWidth = 4;
+      _squareHight = 1;
       _player1 = p1;
       _player2 = p2;
 

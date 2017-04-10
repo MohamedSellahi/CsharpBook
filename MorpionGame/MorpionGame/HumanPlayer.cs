@@ -78,7 +78,7 @@ namespace MorpionGame {
       try {
         do {
 
-          int userInput = (int)Console.ReadKey().Key;
+          int userInput = (int)Console.ReadKey(true).Key;
 
           if (userInput == DownKey) {
             // try move down
@@ -98,9 +98,9 @@ namespace MorpionGame {
           }
           else if (userInput == EnterKey) {
             // try place sumbole in the corresponding sqaure
-            if (PressEnter(boardevents.Mboard))// if success 
-              break;
-
+            if (PressEnter(boardevents.Mboard))// if success
+              boardevents.Mboard.DrawMorpionBoard(); 
+             
           }
           else {
             // play error message 
@@ -122,13 +122,14 @@ namespace MorpionGame {
     }
 
     private bool PressEnter(Morpion mboard) {
-      // try to place 'O' or 'X' in the corresponding position 
-      // if possible , other wise it recovers the previous, and 
-      // places the curesur in it 
-      if(mboard)
+      //// try to place 'O' or 'X' in the corresponding position 
+      //// if possible , other wise it recovers the previous, and 
+      //// places the curesur in it 
+      //if(mboard)
 
 
-      return false;
+      //return false;
+      return mboard.PlacePlayerMovement(mboard.XCursor, mboard.YCursor, this);
     }
 
     private void MoveLeft(Morpion mboard) {

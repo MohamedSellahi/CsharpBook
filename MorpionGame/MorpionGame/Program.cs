@@ -10,17 +10,21 @@ namespace MorpionGame {
   class Program {
     static void Main(string[] args) {
 
-      Morpion m = new Morpion(15, 10, SquareOccupation.Empty);
-      m.XOrig = Console.CursorLeft;
-      m.YOrig = Console.CursorTop;
-      m.DrawMorpionBoard();
-      m.CallPlayer1();
-      m.CallPlayer2();
+      //Morpion m = new Morpion(15, 10, SquareOccupation.Player1);
+      //m.XOrig = Console.CursorLeft;
+      //m.YOrig = Console.CursorTop;
+      //m.DrawMorpionBoard();
+      //m.CallPlayer1();
+      //m.CallPlayer2();
 
 
-      //Morpion m2 = new Morpion(5, 5, SquareOccupation.Player1, new HumanPlayer("Player1", 'X'),
-      //                                                        new HumanPlayer("Player 2", 'O'));
-
+      Morpion m2 = new Morpion(5, 5, SquareOccupation.Empty, new HumanPlayer("Player1", 'X'),
+                                                              new PCPlayer('O'));
+      m2.XOrig = Console.CursorLeft;
+      m2.YOrig = Console.CursorTop;
+      m2.DrawMorpionBoard();
+      m2.CallPlayer1();
+      m2.CallPlayer2();
 
       //m2.Xorig = Console.CursorLeft;
       //m2.YOrig = Console.CursorTop;
@@ -36,7 +40,7 @@ namespace MorpionGame {
       //Console.WriteLine("O");
 
 
-      Console.SetCursorPosition(m.XOrig + 1, m.YOrig + 1);
+     // Console.SetCursorPosition(m.XOrig + 1, m.YOrig + 1);
       Console.ReadLine();
       Console.WriteLine("O");
       Console.SetCursorPosition(bottomX, bottomY);
