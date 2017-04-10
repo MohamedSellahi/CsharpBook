@@ -286,8 +286,8 @@ namespace MorpionGame {
         return false;
       }
       else {
-        if (_board[xpos, ypos].Occupation == SquareOccupation.Empty) {
-          _board[xpos, ypos].Occupation = p.POccupation;
+        if (_board[ypos, xpos].Occupation == SquareOccupation.Empty) {
+          _board[ypos, xpos].Occupation = p.POccupation;
           return true;
         }          
         else
