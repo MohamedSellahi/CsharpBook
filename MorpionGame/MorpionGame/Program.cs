@@ -17,16 +17,17 @@ namespace MorpionGame {
       //m.CallPlayer1();
       //m.CallPlayer2();
 
+       
 
-      Morpion m2 = new Morpion(2, 2, SquareOccupation.Empty, new HumanPlayer("Player1", 'X'),
-                                                             new HumanPlayer("Player2",'O'));
+      Morpion m2 = new Morpion(6, 6, SquareOccupation.Empty, new HumanPlayer("Mohamed", 'X'),
+                                                             new HumanPlayer("Luc",'O'));
       m2.XOrig = Console.CursorLeft;
       m2.YOrig = Console.CursorTop;
       m2.DrawMorpionBoard();
 
       while (m2.LeftMovements > 0) {
-        m2.CallPlayer2();
         m2.CallPlayer1();
+        m2.CallPlayer2();
       }
 
       Console.WriteLine("game over ");

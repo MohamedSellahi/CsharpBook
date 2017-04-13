@@ -49,6 +49,8 @@ namespace MorpionGame {
       set { _nbMeftmovements = value; }
     }
 
+    public int VerticalShift { get; set; }
+
 
 
 
@@ -111,6 +113,7 @@ namespace MorpionGame {
       _squareHight = 1;
       LeftMovements = NRows * NCollumns;
       WhichTurn = TurnIsFor.player1;
+      VerticalShift = 0;
 
 
     }
@@ -141,6 +144,7 @@ namespace MorpionGame {
       WhichTurn = TurnIsFor.player1;
       XCursor = NCollumns / 2;
       YCursor = NRows / 2;
+      VerticalShift = 0;
 
     }
 
@@ -171,6 +175,8 @@ namespace MorpionGame {
       WhichTurn = TurnIsFor.player1; // we start by player 1
       XCursor = NCollumns / 2;
       YCursor = NRows / 2;
+
+      VerticalShift = 0;
     }
 
     public Morpion(int nrows, int ncolumns, SquareOccupation defaultfill, Player p1, Player p2) {
@@ -195,6 +201,7 @@ namespace MorpionGame {
       WhichTurn = TurnIsFor.player1;
       XCursor = NCollumns / 2;
       YCursor = NRows / 2;
+      VerticalShift = 0;
     }
 
 
@@ -237,7 +244,12 @@ namespace MorpionGame {
       //}
 
       Console.Clear();
+      VerticalShift = 0;
+      Console.WriteLine("************** Morpion ************");
+      VerticalShift++;
       Console.WriteLine("Left moves {0}", LeftMovements);
+      VerticalShift++;
+      
       // drawing the lines 
       for (int irow = 0; irow < NRows; ++irow) {
         for (int icol = 0; icol < NCollumns; ++icol) {

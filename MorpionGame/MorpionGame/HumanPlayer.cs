@@ -100,7 +100,6 @@ namespace MorpionGame {
             // try place sumbole in the corresponding sqaure
             if (PressEnter(boardevents.Mboard)) {// if success
               --boardevents.Mboard.LeftMovements;
-
               boardevents.Mboard.DrawMorpionBoard();
               if (this.POccupation == SquareOccupation.Player1)
                 boardevents.Mboard.WhichTurn = TurnIsFor.player2;
@@ -151,7 +150,7 @@ namespace MorpionGame {
       }
       int xcurr = mboard.XCursor * mboard.SqWidth + 1;
 
-      Console.SetCursorPosition(mboard.XCursor * mboard.SqWidth + 1, mboard.YCursor * 2 + 1);
+      Console.SetCursorPosition(mboard.XCursor * mboard.SqWidth + 1, mboard.YCursor * 2 + 1 + mboard.VerticalShift);
     }
 
     private void MoveRight(Morpion mboard) {
@@ -162,7 +161,7 @@ namespace MorpionGame {
       if (++mboard.XCursor > mboard.NCollumns - 1) { // wrap arround
         mboard.XCursor = 0;
       }
-      Console.SetCursorPosition(mboard.XCursor * mboard.SqWidth + 1 , mboard.YCursor * 2 + 1);
+      Console.SetCursorPosition(mboard.XCursor * mboard.SqWidth + 1 , mboard.YCursor * 2 + 1 + mboard.VerticalShift);
     }
 
     private void MoveDown(Morpion mboard) {
@@ -173,7 +172,7 @@ namespace MorpionGame {
       if (--mboard.YCursor < 0) { // wrap arround
         mboard.YCursor = mboard.NRows - 1;
       }
-      Console.SetCursorPosition(mboard.XCursor * mboard.SqWidth + 1, mboard.YCursor * 2 + 1);
+      Console.SetCursorPosition(mboard.XCursor * mboard.SqWidth + 1, mboard.YCursor * 2 + 1 + mboard.VerticalShift);
 
 
     }
@@ -186,7 +185,7 @@ namespace MorpionGame {
       if (++mboard.YCursor > mboard.NRows - 1) { // wrap arround
         mboard.YCursor = 0;
       }
-      Console.SetCursorPosition(mboard.XCursor * mboard.SqWidth + 1, mboard.YCursor *2 + 1);
+      Console.SetCursorPosition(mboard.XCursor * mboard.SqWidth + 1, mboard.YCursor *2 + 1 + mboard.VerticalShift);
 
     }
 
