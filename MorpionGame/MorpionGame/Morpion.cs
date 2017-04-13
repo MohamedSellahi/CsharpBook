@@ -334,20 +334,9 @@ namespace MorpionGame {
       }
 
     } 
-
-
-
-
-
-
-
-
+    
 
     #endregion
-
-
-
-
 
 
   }
