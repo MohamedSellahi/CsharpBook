@@ -17,10 +17,10 @@ namespace MorpionGame {
       //m.CallPlayer1();
       //m.CallPlayer2();
 
-       
 
-      Morpion m2 = new Morpion(6, 6, SquareOccupation.Empty, new HumanPlayer("Mohamed", 'X'),
-                                                             new HumanPlayer("Luc",'O'));
+
+      Morpion m2 = new Morpion(6 , 6 , SquareOccupation.Empty , new HumanPlayer("Mohamed" , 'X') ,
+                                                             new HumanPlayer("Luc" , 'O'));
       m2.XOrig = Console.CursorLeft;
       m2.YOrig = Console.CursorTop;
       m2.DrawMorpionBoard();
@@ -40,31 +40,30 @@ namespace MorpionGame {
 
 
 
-     // int bottomX = Console.CursorLeft;
-     // int bottomY = Console.CursorTop;
-     // //Console.SetCursorPosition(m2.Xorig + 1, m2.YOrig + 1);
-     // //Console.WriteLine("O");
+      // int bottomX = Console.CursorLeft;
+      // int bottomY = Console.CursorTop;
+      // //Console.SetCursorPosition(m2.Xorig + 1, m2.YOrig + 1);
+      // //Console.WriteLine("O");
 
 
-     //// Console.SetCursorPosition(m.XOrig + 1, m.YOrig + 1);
-     // Console.ReadLine();
-     // Console.WriteLine("O");
-     // Console.SetCursorPosition(bottomX, bottomY);
+      //// Console.SetCursorPosition(m.XOrig + 1, m.YOrig + 1);
+      // Console.ReadLine();
+      // Console.WriteLine("O");
+      // Console.SetCursorPosition(bottomX, bottomY);
 
     }
 
 
 
-    public static T[] Populate<T>(T[] array, Func<T> provider) {
+    public static T[] Populate<T>(T[] array , Func<T> provider) {
       for (int i = 0; i < array.Length; i++) {
         array[i] = provider();
 
       }
+     
 
       return array;
     }
-
-
 
   }
 

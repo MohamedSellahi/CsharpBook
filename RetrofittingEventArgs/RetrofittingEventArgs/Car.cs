@@ -30,6 +30,7 @@ namespace RetrofittingEventArgs {
 
     public event CarEngineHandler Exploided;
     public event CarEngineHandler GonnaBlow;
+    public event EventHandler<CarEventArgs> myHandler;
 
     public void Accelerate(int delta) {
       if (CarIsDead)
