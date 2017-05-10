@@ -69,7 +69,7 @@ namespace SimpleLambdaExpression {
       Console.WriteLine("{0} + {1} = {2}", x, y, AddHandler(x, y));
       Console.WriteLine("{0} - {1} = {2}", x, y, Substraction(x, y));
       Console.WriteLine("{0} * {1} = {2}", x, y, Multiplication(x, y));
-      Console.WriteLine("{0} / {1} = {2}", x, y,Devision(x, y));
+      Console.WriteLine("{0} / {1} = {2}", x, y, Devision(x, y));
 
 
       double a = 3.0, b = 0;

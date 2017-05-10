@@ -22,7 +22,7 @@ namespace CustomComparator {
 
       // sort by population 
       Console.WriteLine("\n----- Sorting bu Population -----\n");
-      Array.Sort(cities, CityInfo.CompareByPopulation);
+      Array.Sort(cities, CityInfo.CompareByName);
       DisplayArray(cities);
 
       // sort by country + name
