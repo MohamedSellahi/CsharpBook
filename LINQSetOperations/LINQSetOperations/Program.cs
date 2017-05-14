@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,6 +26,7 @@ namespace LINQSetOperations {
       List<string> mycars = new List<string> { "Yugo", "Aztec", "BMW" };
       List<string> yourCars = new List<string> { "BMW", "Saab", "Aztec" };
 
+      
       var carDiff = (from c in mycars select c).Except(from c2 in yourCars select c2);
 
       Console.WriteLine("Set1");
@@ -51,7 +53,7 @@ namespace LINQSetOperations {
 
       var carDiff = (from c in mycars select c).Intersect(from c2 in yourCars select c2);
 
-      
+
       Console.WriteLine("Set1 intersect set2 : ");
       foreach (var item in carDiff) {
         Console.Write("{0} ", item);
