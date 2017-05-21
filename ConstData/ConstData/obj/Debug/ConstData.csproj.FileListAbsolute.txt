@@ -4,3 +4,9 @@ C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\ConstData\
 C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\ConstData\ConstData\obj\Debug\ConstData.csprojResolveAssemblyReference.cache
 C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\ConstData\ConstData\obj\Debug\ConstData.exe
 C:\Users\34011-36-05\Documents\Visual Studio 2015\Projects\CSharpBook\ConstData\ConstData\obj\Debug\ConstData.pdb
+C:\Users\Mohamed\Source\Repos\CsharpBook\ConstData\ConstData\bin\Debug\ConstData.exe.config
+C:\Users\Mohamed\Source\Repos\CsharpBook\ConstData\ConstData\bin\Debug\ConstData.exe
+C:\Users\Mohamed\Source\Repos\CsharpBook\ConstData\ConstData\bin\Debug\ConstData.pdb
+C:\Users\Mohamed\Source\Repos\CsharpBook\ConstData\ConstData\obj\Debug\ConstData.csprojResolveAssemblyReference.cache
+C:\Users\Mohamed\Source\Repos\CsharpBook\ConstData\ConstData\obj\Debug\ConstData.exe
+C:\Users\Mohamed\Source\Repos\CsharpBook\ConstData\ConstData\obj\Debug\ConstData.pdb
