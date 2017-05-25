@@ -1,0 +1,6 @@
+C:\Users\Mohamed\Source\Repos\CsharpBook\ClonablePoint\ClonablePoint\bin\Debug\ClonablePoint.exe.config
+C:\Users\Mohamed\Source\Repos\CsharpBook\ClonablePoint\ClonablePoint\bin\Debug\ClonablePoint.exe
+C:\Users\Mohamed\Source\Repos\CsharpBook\ClonablePoint\ClonablePoint\bin\Debug\ClonablePoint.pdb
+C:\Users\Mohamed\Source\Repos\CsharpBook\ClonablePoint\ClonablePoint\obj\Debug\ClonablePoint.exe
+C:\Users\Mohamed\Source\Repos\CsharpBook\ClonablePoint\ClonablePoint\obj\Debug\ClonablePoint.pdb
+C:\Users\Mohamed\Source\Repos\CsharpBook\ClonablePoint\ClonablePoint\obj\Debug\ClonablePoint.csprojResolveAssemblyReference.cache

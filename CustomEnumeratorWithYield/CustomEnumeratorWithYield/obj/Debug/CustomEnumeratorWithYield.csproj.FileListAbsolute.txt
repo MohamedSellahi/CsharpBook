@@ -1,0 +1,5 @@
+C:\Users\Mohamed\Source\Repos\CsharpBook\CustomEnumeratorWithYield\CustomEnumeratorWithYield\bin\Debug\CustomEnumeratorWithYield.exe.config
+C:\Users\Mohamed\Source\Repos\CsharpBook\CustomEnumeratorWithYield\CustomEnumeratorWithYield\bin\Debug\CustomEnumeratorWithYield.exe
+C:\Users\Mohamed\Source\Repos\CsharpBook\CustomEnumeratorWithYield\CustomEnumeratorWithYield\bin\Debug\CustomEnumeratorWithYield.pdb
+C:\Users\Mohamed\Source\Repos\CsharpBook\CustomEnumeratorWithYield\CustomEnumeratorWithYield\obj\Debug\CustomEnumeratorWithYield.exe
+C:\Users\Mohamed\Source\Repos\CsharpBook\CustomEnumeratorWithYield\CustomEnumeratorWithYield\obj\Debug\CustomEnumeratorWithYield.pdb

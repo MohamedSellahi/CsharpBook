@@ -1,0 +1,6 @@
+C:\Users\Mohamed\Source\Repos\CsharpBook\CustomEnumerator\CustomEnumerator\bin\Debug\CustomEnumerator.exe.config
+C:\Users\Mohamed\Source\Repos\CsharpBook\CustomEnumerator\CustomEnumerator\bin\Debug\CustomEnumerator.exe
+C:\Users\Mohamed\Source\Repos\CsharpBook\CustomEnumerator\CustomEnumerator\bin\Debug\CustomEnumerator.pdb
+C:\Users\Mohamed\Source\Repos\CsharpBook\CustomEnumerator\CustomEnumerator\obj\Debug\CustomEnumerator.csprojResolveAssemblyReference.cache
+C:\Users\Mohamed\Source\Repos\CsharpBook\CustomEnumerator\CustomEnumerator\obj\Debug\CustomEnumerator.exe
+C:\Users\Mohamed\Source\Repos\CsharpBook\CustomEnumerator\CustomEnumerator\obj\Debug\CustomEnumerator.pdb
