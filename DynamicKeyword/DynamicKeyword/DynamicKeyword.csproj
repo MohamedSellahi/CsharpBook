@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{30C170E4-BDBD-49EE-9C39-738951BF031D}</ProjectGuid>
+    <ProjectGuid>{E3FF4DC0-F8E2-42EE-ADAD-22D08B7FAFAE}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>DynamicKeyword</RootNamespace>
     <AssemblyName>DynamicKeyword</AssemblyName>
@@ -42,6 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DynamicClass.cs" />
+    <Compile Include="Person.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

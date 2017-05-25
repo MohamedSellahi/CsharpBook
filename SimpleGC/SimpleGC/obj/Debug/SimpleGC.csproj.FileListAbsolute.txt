@@ -1,0 +1,6 @@
+C:\Users\Mohamed\Source\Repos\CsharpBook\SimpleGC\SimpleGC\bin\Debug\SimpleGC.exe.config
+C:\Users\Mohamed\Source\Repos\CsharpBook\SimpleGC\SimpleGC\bin\Debug\SimpleGC.exe
+C:\Users\Mohamed\Source\Repos\CsharpBook\SimpleGC\SimpleGC\bin\Debug\SimpleGC.pdb
+C:\Users\Mohamed\Source\Repos\CsharpBook\SimpleGC\SimpleGC\obj\Debug\SimpleGC.csprojResolveAssemblyReference.cache
+C:\Users\Mohamed\Source\Repos\CsharpBook\SimpleGC\SimpleGC\obj\Debug\SimpleGC.exe
+C:\Users\Mohamed\Source\Repos\CsharpBook\SimpleGC\SimpleGC\obj\Debug\SimpleGC.pdb
