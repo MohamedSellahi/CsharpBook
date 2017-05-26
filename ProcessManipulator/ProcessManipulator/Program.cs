@@ -10,6 +10,21 @@ namespace ProcessManipulator {
     static void Main(string[] args) {
       ListAllProcesses();
 
+      while (true) {
+        try {
+          string userInput = Console.ReadLine();
+          if (userInput == "q") {
+            break;
+          }
+          int pid = Convert.ToInt32(userInput);
+          EnumerateLoadedDLL(pid);
+
+        }
+        catch (Exception e) {
+          Console.WriteLine("Please enter an integer");
+        }
+      }
+
       //while (true) {
       //  try {
       //    string userInput = Console.ReadLine();
@@ -56,7 +71,7 @@ namespace ProcessManipulator {
       //    Console.WriteLine("Please enter an integer");
       //  }
       //}
-      StartAndKillProcess();
+      //StartAndKillProcess();
 
     }
 
@@ -156,6 +171,29 @@ namespace ProcessManipulator {
       catch (InvalidOperationException ex) {
         Console.WriteLine(ex.Message);
       }
+    }
+
+    static void EnumerateLoadedDLL(int pid) {
+      Process theProc = null;
+      try {
+        theProc = Process.GetProcessById(pid);
+      }
+      catch (ArgumentException ex) {
+        Console.WriteLine(ex.Message);
+        return;
+      }
+      ProcessModuleCollection pmod = theProc.Modules;
+
+      Console.WriteLine("Loaded Modules: ");
+      foreach (ProcessModule pm in pmod) {
+        
+        Console.WriteLine(pm.ModuleName);
+      }
+      Console.WriteLine("***************************************");
+
+
+
+
     }
   }
 
