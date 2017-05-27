@@ -56,22 +56,28 @@ namespace LinqToXmlFirstLook {
                              new XElement("PetName", "Jimbo"),
                              new XElement("Color", "Red"),
                              new XElement("Maker", "Ford")
-                         )
+                         ),
+                         new XElement("Car", new XAttribute("ID", "2000"),
+                             new XElement("PetName", "Rusty"),
+                             new XElement("Color", "Blue"),
+                             new XElement("Maker", "BMW")),
+                          new XElement("Car", new XAttribute("ID", "2000"),
+                             new XElement("PetName", "Rusty"),
+                             new XElement("Color", "Blue"),
+                             new XElement("Maker", "BMW"))
                       );
-      XElement doc2 = new XElement("Head0",
-                           new XElement("Head00", new XAttribute("at00", "00"), new XAttribute("at01", "01"),
-                               new XElement("Head10", new XAttribute("at10", "10")),
-                               new XElement("Head20", new XAttribute("at20", "20"),
-                                   new XElement("Head200", new XAttribute("at200", "200"),
-                                       new XElement("Head2000", new XAttribute("at2000", "2000")))
-                               )
-                           )
-        );
+
+      //delete the PetName element from the tree 
+      
+      doc.Descendants("PetName").Remove();
       // Save to file
       doc.Save("InventoryWithLINQ.xml");
-      doc2.Save("InventoryWithLINQ2.xml");
+     
 
     }
+
+   
+
 
   }
 }

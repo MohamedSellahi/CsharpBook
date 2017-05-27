@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6D37C3DA-0E2C-4D09-8119-9DD34FD9DD20}</ProjectGuid>
+    <ProjectGuid>{CB40FE2C-9B5C-4AB4-8531-2C5ADE92FCAC}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>LinqToXmlFirstLook</RootNamespace>
-    <AssemblyName>LinqToXmlFirstLook</AssemblyName>
+    <RootNamespace>GenerateXMLFromArray</RootNamespace>
+    <AssemblyName>GenerateXMLFromArray</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -47,7 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="XMLClass.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
