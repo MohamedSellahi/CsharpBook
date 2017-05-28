@@ -23,5 +23,24 @@ namespace LindToXmlWinApp {
       
       
     }
+
+    private void Window_Loaded(object sender, RoutedEventArgs e) {
+      // display current XML inventory i textBox control 
+      InventoryTextBlock.Text = LinqToXmlObjectModel.GetXmlInventory().ToString(); 
+    }
+
+    private void btnAdd_Click(object sender, RoutedEventArgs e) {
+      // add new item to doc 
+      LinqToXmlObjectModel.InsertNewElement(txtMaker.Text, txtColor.Text, txtPetName.Text);
+      // display the curren XML document 
+      InventoryTextBlock.Text = LinqToXmlObjectModel.GetXmlInventory().ToString();
+
+    }
+
+   
+
+    private void SearchItembtn_Click(object sender, RoutedEventArgs e) {
+      LinqToXmlObjectModel.LookUpColorsForMaker(textMakeLookup.Text);
+    }
   }
 }
