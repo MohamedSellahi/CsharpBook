@@ -1,0 +1,25 @@
+﻿<Window x:Class="MyExtendabeApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyExtendabeApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <StackPanel>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="LoadButton" Grid.Column="1" Height="20"
+                    Content="LoadLibrary" Click="LoadButton_Click" />
+        </Grid>
+        <Border BorderThickness="1" BorderBrush="#eee">
+            <TextBlock x:Name="LoadStatustextBlock" Padding="10" Text="{Binding Path=value}"
+                   Background="#eee" Foreground="{Binding Path=value}"/>
+        </Border>
+
+    </StackPanel>
+</Window>
