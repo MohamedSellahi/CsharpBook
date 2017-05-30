@@ -21,7 +21,7 @@ namespace CarEvents {
       // NameOfObject.NameOfEvent -= handler;
 
       Car c1 = new Car("LaggyCar", 100, 10);
-
+      
       Car.CarEngineHandler h1 = new Car.CarEngineHandler(DisplayMessage);
       Car.CarEngineHandler h2 = new Car.CarEngineHandler(DisplayMessageUpperCase);
 
@@ -32,6 +32,7 @@ namespace CarEvents {
         c1.Accelerate(20);
       }
 
+      
       #endregion
 
       #region Subscribing using group conversion syntax

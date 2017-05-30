@@ -9,25 +9,22 @@
         Title="MainWindow" Height="600" Width="525">
    <StackPanel>
       <!-- Configure look and feel -->
-      <Button x:Name="btn"  Height="50" Width="100" Content="Ok" FontSize="20" Background="Green"
-              Foreground="Yellow"/>
+      <Button x:Name="btn"  Height="50" Width="100" Content="Ok" FontSize="20"
+              Foreground="Yellow" Background="Green"/>
       <!-- using property-element syntax -->
-      
+
       <!-- Configure look and feel -->
       <Button x:Name="btn2"  Height="50" Width="100" Content="Ok" FontSize="20"
               Margin="5"
               Foreground="Yellow" >
-         
          <Button.Background>
-            <LinearGradientBrush>
-               <GradientStop Color="DarkOrange" Offset="0"/>
+            <LinearGradientBrush EndPoint="1,1">
+               <GradientStop Color="DarkOrange"/>
                <GradientStop Color="DarkRed" Offset="1"/>
-               <GradientStop Color="LightBlue" Offset="2"/>
             </LinearGradientBrush>
-         </Button.Background>    
-
+         </Button.Background>
       </Button>
-      
+
       <!-- Attached property : attached property allows a child element 
            to set the value for a property that is actually defined in 
            the parent element: Only dependency properties can be set using
@@ -36,7 +33,7 @@
          <Ellipse Canvas.Top="10" Canvas.Left="10" Height="20" 
                   Width="20" Fill="DarkBlue" />
       </Canvas>
-      
+
       <!--Markup extensions:
           syntax: 
           <Element PropertyToSet = "{MarkupExtension}"/>
@@ -51,12 +48,12 @@
          <!-- The type Markup is XAML version of thec# typeof operator -->
          <Label Content="{x:Type Button}"/>
          <Label Content="{x:Type CorLib:Boolean}" />
-         
+
          <!-- Fill the list box with an array of strings -->
          <ListBox Width="200" Height="50">
             <ListBox.ItemsSource>
                <x:Array Type="CorLib:String">
-                  <CorLib:String>Sun Kill moon </CorLib:String>
+                  <CorLib:String>Sun Kill moon</CorLib:String>
                   <CorLib:String>Red House painters</CorLib:String>
                   <CorLib:String>Besnard lakes</CorLib:String>
                </x:Array>
@@ -69,18 +66,18 @@
                   <CorLib:Int32>10</CorLib:Int32>
                   <CorLib:Int32>100</CorLib:Int32>
                </x:Array>
-          </ListBox.ItemsSource>
+            </ListBox.ItemsSource>
          </ListBox>
 
-         
+
       </StackPanel>
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
 
 
    </StackPanel>
