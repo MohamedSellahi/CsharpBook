@@ -1,0 +1,29 @@
+﻿<Window x:Class="MyXMLPAd.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MyXMLPAd"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="340" Width="700"
+        Loaded="Window_Loaded" Closed="Window_Closed"
+        WindowStartupLocation="CenterScreen"
+        >
+   <DockPanel LastChildFill="True">
+   <!-- Button to launch parsing xaml -->
+      <Button DockPanel.Dock="Top" x:Name="btnViewXaml" Width="100"
+              Height="40" Content="View Xaml" Click="btnViewXaml_Click"/>
+      
+      <TextBox AcceptsReturn="True" x:Name="txtXamlData"
+               FontSize="14" Background="Black" Foreground="Yellow"
+               BorderBrush="Blue" VerticalScrollBarVisibility="Visible"
+               AcceptsTab="True"
+         />
+
+
+   </DockPanel> 
+   
+
+
+
+</Window>
