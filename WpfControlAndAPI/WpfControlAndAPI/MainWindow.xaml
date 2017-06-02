@@ -9,6 +9,7 @@
         Title="MainWindow" Height="380" Width="865">
    <Window.Resources>
       <SolidColorBrush x:Key="hilightBrush" Color="#FFFFCA00" Opacity="0.5"/>
+      <local:myDoubleConverter x:Key="myConverter" />
    </Window.Resources>
 
    <Grid x:Name="layoutRoot">
@@ -103,7 +104,7 @@
          </TabItem>
 
          <TabItem x:Name="tabDataBinding" Header="Data Binding">
-            <StackPanel Width="250">
+            <StackPanel Width="250" DataContext="{Binding ElementName=mySB}" >
                <Label Content="move the scroll bar to see the current value"/>
                <!-- The scrollbar's valueis the source of this bind -->
                <ScrollBar x:Name="mySB" Orientation="Horizontal" Height="30"
@@ -112,14 +113,20 @@
                <!-- data context is usefull to get one source for multiple elements 
                in a data tree -->
                <Label x:Name="labelSBThumb" Height="30" BorderBrush="Blue" BorderThickness="2"
-                      DataContext="{Binding ElementName=mySB}"
-                      Content="{Binding Path=Value}"/>
-               <Button Content="Click" Height="140" />
+                      Content="{Binding Path=Value, Converter={StaticResource myConverter}}"/>
+               <Button Content="Click" Height="100"
+                       FontSize="{Binding Path=Value, Converter={StaticResource myConverter}}"/>
+               <Button x:Name="btn2" Content="Click" Height="100"
+                       FontSize="{Binding Path=Value, Converter={StaticResource myConverter}}"/>
             </StackPanel>
          </TabItem>
 
-         <TabItem Header="DataGrid" HorizontalAlignment="Left" Height="20"
-                  VerticalAlignment="Top" Width="74" Margin="-2 -2 -15 0">
+         <TabItem Header="DataGrid" >
+            <Grid>
+               <DataGrid x:Name="gridInventory" AlternationCount="2"
+                         AlternatingRowBackground="#FFF1BFBF" RowBackground="#FFFFD054"
+                         SelectionChanged="gridInventory_SelectionChanged"/>
+            </Grid>
             
 
          </TabItem>

@@ -1,4 +1,5 @@
 ﻿using System;
+using coll = System.Collections.Generic;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
@@ -9,12 +10,16 @@ using System.Windows.Markup;
 using Microsoft.Win32;
 using System.Windows.Annotations;
 using System.Windows.Annotations.Storage;
+using System.Windows.Data;
 
 namespace WpfControlAndAPI {
   /// <summary>
   /// Interaction logic for MainWindow.xaml
   /// </summary>
   public partial class MainWindow : Window {
+
+    coll.List<Car> cars = null;
+
     public MainWindow() {
       InitializeComponent();
 
@@ -22,13 +27,52 @@ namespace WpfControlAndAPI {
       this.myCanvas.EditingMode = InkCanvasEditingMode.Ink;
       this.inkRadio.IsChecked = true;
       this.comboColors.SelectedIndex = 0;
+      this.mySB.Value = 40;
 
       // Document tab 
       Populatedocument();
 
       // 
       EnableAnnotations();
-     
+
+      // set bindings 
+      SetBindings();
+
+      // generate somme cars 
+      GetSommeCars();
+      // 
+      ConfigureGrid();
+    }
+
+    private void ConfigureGrid() {
+      this.gridInventory.ItemsSource = cars;
+    }
+
+    private void GetSommeCars() {
+      this.cars = new coll.List<Car> {
+        new Car{CarId=1, Color = "Red", Maker = "Ford", PetName ="Mustang"},
+        new Car{CarId = 2, Color ="Blue", Maker ="BMW", PetName="Z-Series"},
+        new Car{CarId =3, Color = "Black", Maker="Mercedes", PetName="S-Series"},
+        new Car{CarId=1, Color = "Red", Maker = "Ford", PetName ="Mustang"},
+        new Car{CarId = 2, Color ="Blue", Maker ="BMW", PetName="Z-Series"},
+        new Car{CarId =3, Color = "Black", Maker="Mercedes", PetName="S-Series"},
+        new Car{CarId=1, Color = "Red", Maker = "Ford", PetName ="Mustang"},
+        new Car{CarId = 2, Color ="Blue", Maker ="BMW", PetName="Z-Series"},
+        new Car{CarId =3, Color = "Black", Maker="Mercedes", PetName="S-Series"}
+      };
+    
+    }
+
+    private void SetBindings() {
+      // CReate a binding object 
+      Binding b = new Binding();
+      // Registes the converter, the source and the path 
+      b.Converter = new myDoubleConverter();
+      b.Source = this.mySB;
+      b.Path = new PropertyPath("Value");
+
+      // call the set binding method on the label 
+      this.btn2.SetBinding(Button.FontSizeProperty, b);
     }
 
     private void EnableAnnotations() {
@@ -43,10 +87,10 @@ namespace WpfControlAndAPI {
       // You could use this object to programatically add, delete
       // or find annotations
       AnnotationStore store = new XmlStreamStore(annoStream);
-     
+
       // Enbable the annotation services 
       annoService.Enable(store);
-     
+
 
     }
 
@@ -75,9 +119,9 @@ namespace WpfControlAndAPI {
       // Get the tag of the selected panel 
       string colorToUse = (this.comboColors.SelectedItem as StackPanel).Tag.ToString();
 
-      
+
       // Change the color used to render the strokes.
-      this.myCanvas.DefaultDrawingAttributes.Color = (Color)ColorConverter.ConvertFromString(colorToUse); 
+      this.myCanvas.DefaultDrawingAttributes.Color = (Color)ColorConverter.ConvertFromString(colorToUse);
     }
 
     private void btnSave_Click(object sender, RoutedEventArgs e) {
@@ -103,14 +147,14 @@ namespace WpfControlAndAPI {
       }
 
 
-      
+
     }
 
     private void btnLoad_Click(object sender, RoutedEventArgs e) {
 
       OpenFileDialog dlg = new OpenFileDialog();
       dlg.Filter = "canvas Data | *.bin";
-      string fileName = null; 
+      string fileName = null;
       if ((bool)(dlg.ShowDialog()) == true) {
         // try to open 
         fileName = dlg.FileName;
@@ -121,7 +165,7 @@ namespace WpfControlAndAPI {
             myCanvas.Strokes = strockes;
           }
         }
-        catch (Exception ex ) {
+        catch (Exception ex) {
           MessageBox.Show(ex.Message, "Error opening file");
         }
 
@@ -129,13 +173,13 @@ namespace WpfControlAndAPI {
       // Fill StrockCollection from file 
 
 
-      
+
     }
 
     private void btnClear_Click(object sender, RoutedEventArgs e) {
       // Clear the canvas 
       this.myCanvas.Strokes.Clear();
-      
+
     }
 
     // 
@@ -175,10 +219,10 @@ namespace WpfControlAndAPI {
         svDlg.Filter = "XML data | *.XML";
 
         if ((bool)(svDlg.ShowDialog() == true)) {
-          string fileName = svDlg.FileName; 
+          string fileName = svDlg.FileName;
 
-          using (FileStream fs = File.Open(fileName,FileMode.Create)) {
-            XamlWriter.Save(this.myReader.Document,fs);
+          using (FileStream fs = File.Open(fileName, FileMode.Create)) {
+            XamlWriter.Save(this.myReader.Document, fs);
           }
         }
       };
@@ -197,17 +241,21 @@ namespace WpfControlAndAPI {
               MessageBox.Show(ex.Message, "Error Loading Doc!");
             }
           }
-         
-
         }
       };
 
-
-      
-      
-      
-
     }
 
+    private void gridInventory_SelectionChanged(object sender, SelectionChangedEventArgs e) {
+      var selecteRows = (sender as DataGrid).SelectedItems;
+           
+      string infoStr = null; 
+
+      foreach (var item in selecteRows) {
+        infoStr += ((Car)(item)).ToString() + "\n";
+        MessageBox.Show(infoStr);
+     
+      }
+    }
   }
 }
