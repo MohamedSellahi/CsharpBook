@@ -23,9 +23,15 @@ namespace RenderingWithShapes {
       Circle, Rectangle, Line
     }
     SelectedShape currShape;
+    private bool isFlipped = false; 
 
     public MainWindow() {
       InitializeComponent();
+
+      // i
+      if (this.flipCanvas.IsChecked == true) {
+        isFlipped = true;
+      }
       
     }
 
@@ -75,6 +81,12 @@ namespace RenderingWithShapes {
           break;
       }
 
+      // isFlipped to a private booean field. this is toggled when 
+      // the buttin is clicked 
+      if (isFlipped) {
+        RotateTransform rt = new RotateTransform(-180);
+        shapeToDraw.RenderTransform = rt;
+      }
       // set to/left position to draw in the canvas 
       Canvas.SetLeft(shapeToDraw, e.GetPosition(canvasDrawingArea).X);
       Canvas.SetTop(shapeToDraw, e.GetPosition(canvasDrawingArea).Y);
@@ -97,7 +109,6 @@ namespace RenderingWithShapes {
       if (result!=null) {
         // get the underlying shape clicked on 
         canvasDrawingArea.Children.Remove(result.VisualHit as Shape);
-       
       }
     }
 
@@ -105,9 +116,11 @@ namespace RenderingWithShapes {
       if (flipCanvas.IsChecked == true) {
         RotateTransform rt = new RotateTransform(-180);
         canvasDrawingArea.LayoutTransform = rt;
+        isFlipped = true;
       }
       else {
         canvasDrawingArea.LayoutTransform = null;
+        isFlipped = false;
       }
     }
 

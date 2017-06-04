@@ -32,7 +32,8 @@
       </ToolBar>
       <Canvas Background="LightBlue" x:Name="canvasDrawingArea" 
               MouseLeftButtonDown="canvasDrawingArea_MouseLeftButtonDown"
-              MouseRightButtonDown="canvasDrawingArea_MouseRightButtonDown">
+              MouseRightButtonDown="canvasDrawingArea_MouseRightButtonDown"
+              ClipToBounds="True">
          <!--<StackPanel>
             <Polyline Stroke="Red" StrokeThickness="20" StrokeLineJoin="Round"/>
             <Polygon Fill ="AliceBlue" StrokeThickness ="5" Stroke ="Green"
