@@ -47,7 +47,17 @@ namespace RenderingWithShapes {
       // Configure the correct shape to draw 
       switch (currShape) {
         case SelectedShape.Circle:
+          // Configure a funcy color 
           shapeToDraw = new Ellipse() { Fill = Brushes.Green, Height = 35, Width = 35 };
+          // MAke a Radial Gradiant brush in code 
+          RadialGradientBrush brush = new RadialGradientBrush();
+          brush.GradientStops.Add(new GradientStop(
+                                      (Color)ColorConverter.ConvertFromString("#FF87E71B"),0.589));
+          brush.GradientStops.Add(new GradientStop(
+                                   (Color)ColorConverter.ConvertFromString("#FF2BA92B"), 0.013));
+          brush.GradientStops.Add(new GradientStop(
+                                    (Color)ColorConverter.ConvertFromString("#FF34B71B"), 1));
+          shapeToDraw.Fill = brush;
           break;
         case SelectedShape.Rectangle:
           shapeToDraw = new Rectangle() { Fill = Brushes.Red, Width = 35, Height = 35, RadiusX = 10, RadiusY = 10 };
@@ -71,6 +81,7 @@ namespace RenderingWithShapes {
 
       // draw the shape now
       canvasDrawingArea.Children.Add(shapeToDraw);
+      
 
     }
 
@@ -88,6 +99,20 @@ namespace RenderingWithShapes {
         canvasDrawingArea.Children.Remove(result.VisualHit as Shape);
        
       }
+    }
+
+    private void flipCanvas_Click(object sender, RoutedEventArgs e) {
+      if (flipCanvas.IsChecked == true) {
+        RotateTransform rt = new RotateTransform(-180);
+        canvasDrawingArea.LayoutTransform = rt;
+      }
+      else {
+        canvasDrawingArea.LayoutTransform = null;
+      }
+    }
+
+    private void btnClearCanvas_Click(object sender, RoutedEventArgs e) {
+      this.canvasDrawingArea.Children.Clear();
     }
   }
 }
