@@ -1,0 +1,62 @@
+﻿<Window x:Class="WpfControlsAndAPI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfControlsAndAPI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+   <Border>
+      <TabControl x:Name="myTabSystem" HorizontalAlignment="Left" Height="280"
+                  Margin="10 10 0 0" VerticalAlignment="Top" Width="490">
+         <TabItem Header="InkAPI">
+            <StackPanel Background="#FFE5E5E5">
+               <ToolBar x:Name="inkToolBar" HorizontalAlignment="Left" Width="480" Height="60">
+
+
+                  <Border Margin="0,2,0,3" Width="300">
+                     <Grid>
+                        <RadioButton x:Name="inkRadio" Content="Ink Mode!" Margin="0,0,200,0" Click="inkRadio_Click"/>
+                        <RadioButton x:Name="eraseRadio" Content="Erase Mode!" Margin="100,0" Click="inkRadio_Click"/>
+                        <RadioButton x:Name="selectRadio" Content="Select Mode!" Margin="200,0,0,0" Click="inkRadio_Click"/>
+                     </Grid>
+                  </Border>
+
+
+                  <Separator/>
+
+                  <ComboBox x:Name="comboColors" Width="100" SelectionChanged="ColorChanged">
+                     <ComboBoxItem Content="Red"/>
+                     <ComboBoxItem Content="Blue"/>
+                     <ComboBoxItem Content="Green"/>
+
+                  </ComboBox>
+
+               </ToolBar>
+               <InkCanvas x:Name="myCanvas" >
+
+               </InkCanvas>
+
+
+            </StackPanel>
+            
+           
+
+         </TabItem>
+         <TabItem Header="Documents">
+            <Grid Background="#FFE5E5E5"/>
+         </TabItem>
+         <TabItem Header="DataBinding" HorizontalAlignment="Left" Height="20"
+                  VerticalAlignment="Top" Width="95" Margin="-2 -2 -36 0">
+            <Grid Background="#FFE5E5E5"/>
+         </TabItem>
+         <TabItem Header="DataGrid" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top"
+                  Margin="-2 -2 -15 0">
+            <Grid Background="#FFE5E5E5"/>
+         </TabItem>
+
+      </TabControl>
+
+
+   </Border>
+</Window>
