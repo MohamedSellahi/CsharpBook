@@ -26,6 +26,7 @@ namespace ObjectResourcesApp {
     private void btnOk_Click(object sender, RoutedEventArgs e) {
       // Get the brush an dmake a change 
 
+      //RadialGradientBrush rb = (RadialGradientBrush)(App.Current.Resources["myButtonBrush"]);
       RadialGradientBrush rb = (RadialGradientBrush)(this.Resources["myButtonBrush"]);
       rb.GradientStops[1] = new GradientStop(Colors.Black, 0.0);
 
@@ -38,9 +39,13 @@ namespace ObjectResourcesApp {
     }
 
     private void btnCancel_Click(object sender, RoutedEventArgs e) {
-      this.Resources["myButtonBrush"] = _previousBrush;
-      RadialGradientBrush rb = (RadialGradientBrush)(this.Resources["myButtonBrush"]);
-      rb.GradientStops[1] = new GradientStop((Color)ColorConverter.ConvertFromString("#FF829CEB"), 1); 
+      //this.Resources["myButtonBrush"] = _previousBrush;
+      //RadialGradientBrush rb = (RadialGradientBrush)(this.Resources["myButtonBrush"]);
+      //rb.GradientStops[1] = new GradientStop((Color)ColorConverter.ConvertFromString("#FF829CEB"), 1);
+      TestWindow win = new TestWindow();
+      win.Owner = this;
+      win.WindowStartupLocation = WindowStartupLocation.CenterOwner;
+      win.ShowDialog();
 
 
     }

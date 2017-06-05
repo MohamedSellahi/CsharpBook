@@ -1,9 +1,26 @@
 ﻿<Application x:Class="ObjectResourcesApp.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:opt="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:ObjectResourcesApp"
              StartupUri="MainWindow.xaml">
-    <Application.Resources>
-         
-    </Application.Resources>
+   <Application.Resources>
+      <ResourceDictionary>
+         <ResourceDictionary.MergedDictionaries>
+
+            <!-- here we place our dictionnaries -->
+            <!--<ResourceDictionary  Source="myBrushes.xaml"/>-->
+            
+            <!-- To use assembly wise resource libraries 
+            Use this syntax 
+            /NameOfAssembly;Component/NameOfXamlFileInAssembly.xaml
+            -->
+            <ResourceDictionary 
+               Source="/MyBrushesLibrary;Component/MyBrushes.xaml"/>
+
+         </ResourceDictionary.MergedDictionaries>
+      </ResourceDictionary>
+      
+      
+   </Application.Resources>
 </Application>
