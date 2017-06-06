@@ -45,8 +45,7 @@ namespace SpinningButtonAnimation {
           
         // now animate the RotateTransform 
         rt.BeginAnimation(RotateTransform.AngleProperty, dblAnim);
-         
-
+    
       }
     }
 
