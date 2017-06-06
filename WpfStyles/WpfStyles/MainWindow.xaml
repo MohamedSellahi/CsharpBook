@@ -6,15 +6,33 @@
         xmlns:local="clr-namespace:WpfStyles"
         mc:Ignorable="d"
         Title="A window with Styles" Height="350" Width="525">
-    <StackPanel>
-      <Label x:Name="lblInfo" Content="This Style is boring..."
+   <Grid>
+      <Grid.ColumnDefinitions>
+         <ColumnDefinition Width="*" />
+         <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+      <StackPanel Grid.Column="0">
+         <Label x:Name="lblInfo" Content="This Style is boring..."
              Style="{StaticResource BasicControlStyle}" Width="150"/>
-       <!-- Lets override Cursor property-->
-      <Button x:Name="btnTestButton" Content="Yes but we are reusing settings!" 
+         <!-- Lets override Cursor property-->
+         <Button x:Name="btnTestButton" Content="Yes but we are reusing settings!" 
               Style="{StaticResource BasicControlStyle}" Width="250" Cursor="Help"/>
-      <Button x:Name="btnTestButtonBis" Content="Annothrt Style" 
-              Style="{StaticResource BasicControlStyleBis}"
+         <Button x:Name="btnTestButtonBis" Content="OK" 
+              Style="{StaticResource BigGreenButton}"
               />
+         <Button x:Name="btnTilt" Content="OK!" Style="{StaticResource TiltButton}"/>
 
-   </StackPanel>
+      </StackPanel>
+      <StackPanel Grid.Column="1">
+         <TextBox  Text="this is default TextBox Style, using unnamed Style"/>
+         <TextBox Text="I dont want the default style" Style="{x:Null}"
+                  Width="200" BorderThickness="5" BorderBrush="Black"
+                  Height="60"/>
+         <Button x:Name="btnStyleFromcode" Height="40" 
+                 Width="100" Content="OK" />
+         
+
+
+      </StackPanel>
+   </Grid>
 </Window>

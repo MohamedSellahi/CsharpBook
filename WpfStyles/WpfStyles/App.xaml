@@ -11,13 +11,85 @@
          <Setter Property="Control.Background" Value="AliceBlue"/>
       </Style>
        <!-- Defining the same style by specifiying the target type -->
-      <Style x:Key="BasicControlStyleBis" TargetType="Control">
-         <Setter Property="FontSize" Value="14"/>
-         <Setter Property="Height" Value="40"/>
+      <Style x:Key="BigGreenButton" TargetType="Control">
+         <Setter Property="FontSize" Value="20"/>
+         <Setter Property="Height" Value="100"/>
          <Setter Property="Width" Value="100"/>
          <Setter Property="Background" Value="DarkGreen"/>
          <Setter Property="Foreground" Value="Yellow"/>
       </Style>
          
+       <!-- Subclassing Styles -->
+      <Style x:Key="TiltButton" TargetType="Button" 
+             BasedOn="{StaticResource BigGreenButton}">
+         <Setter Property="Foreground" Value="White"/>
+         <Setter Property="RenderTransform">
+            <Setter.Value>
+               <RotateTransform Angle="30"/>
+            </Setter.Value>
+         </Setter>
+      </Style>
+       
+       <!--The default style for all text boxes
+           this is an unnamed style-->
+      <Style TargetType="TextBox">
+         <Setter Property="FontSize" Value="14"/>
+         <Setter Property="Width" Value="100"/>
+         <Setter Property="Height" Value="30"/>
+         <Setter Property="BorderThickness" Value="5"/>
+         <Setter Property="BorderBrush" Value="Red"/>
+         <Setter Property="FontStyle" Value="Italic"/>
+       <!-- the following setter will be aplied only when the text box
+            is in focus -->
+         <!--<Style.Triggers>
+            <Trigger Property="IsFocused" Value="True">
+               <Setter Property="Background" Value="Yellow" />
+            </Trigger>
+         </Style.Triggers>-->
+         <!--This style will be triggered when the textbox 
+         is focused and the mouse if over -->
+         <Style.Triggers>
+            <MultiTrigger>
+               <MultiTrigger.Conditions>
+                  <Condition Property="IsFocused" Value="true"/>
+                  <Condition Property="IsMouseOver" Value="true"/>
+               </MultiTrigger.Conditions>
+               <Setter Property="Background" Value="Yellow"/>
+            </MultiTrigger>
+         </Style.Triggers>
+      </Style>
+       
+       <!-- Change Font size when mouse over -->
+      <Style x:Key="MagnifyText" TargetType="Button">
+         <Style.Triggers>
+            <Trigger Property="UIElement.IsMouseOver" Value="true">
+               <Setter Property="FontSize" Value="30"/>
+            </Trigger>
+         </Style.Triggers>
+         
+      </Style>
+       
+       
+       <!--Animated styles -->
+      <Style x:Key="GrowingButtonStyle" TargetType="Button">
+         <Setter Property="Height" Value="40"/>
+         <Setter Property="Width" Value="100"/>
+         <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+               <Trigger.EnterActions>
+                  <BeginStoryboard>
+                     <Storyboard TargetProperty="Height">
+                        <DoubleAnimation From="40" To="200"
+                                         Duration="0:0:2" AutoReverse="True"/>
+                     </Storyboard>
+                  </BeginStoryboard>
+               </Trigger.EnterActions>
+            </Trigger>
+
+         </Style.Triggers>
+
+      </Style>
+       
+       
     </Application.Resources>
 </Application>
