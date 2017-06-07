@@ -1,0 +1,38 @@
+﻿<Window x:Class="WpfStyles.AllTEstWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfStyles"
+        mc:Ignorable="d"
+        Title="AllTEstWindow" Height="300" Width="500">
+   <Grid>
+      <Grid.ColumnDefinitions>
+         <ColumnDefinition Width="*" />
+         <ColumnDefinition Width="*" />
+      </Grid.ColumnDefinitions>
+      <StackPanel Grid.Column="0">
+         <Label x:Name="lblInfo" Content="This Style is boring..."
+             Style="{StaticResource BasicControlStyle}" Width="150"/>
+         <!-- Lets override Cursor property-->
+         <Button x:Name="btnTestButton" Content="Yes but we are reusing settings!" 
+              Style="{StaticResource BasicControlStyle}" Width="250" Cursor="Help"/>
+         <Button x:Name="btnTestButtonBis" Content="OK" 
+              Style="{StaticResource BigGreenButton}"
+              />
+         <Button x:Name="btnTilt" Content="OK!" Style="{StaticResource TiltButton}"/>
+
+      </StackPanel>
+      <StackPanel Grid.Column="1">
+         <TextBox  Text="this is default TextBox Style, using unnamed Style"/>
+         <TextBox Text="I dont want the default style" Style="{x:Null}"
+                  Width="200" BorderThickness="5" BorderBrush="Black"
+                  Height="60"/>
+         <Button x:Name="btnStyleFromcode" Height="40" 
+                 Width="100" Content="OK" />
+         <Button  Style="{StaticResource GrowingButtonStyle}" Content="YES"/>
+
+
+      </StackPanel>
+   </Grid>
+</Window>
