@@ -30,7 +30,8 @@
                   Height="60"/>
          <Button x:Name="btnStyleFromcode" Height="40" 
                  Width="100" Content="OK" />
-         
+         <Button x:Name="btnGrowing" Content="Yes!" Style="{StaticResource MagnifyText}"/>
+
 
 
       </StackPanel>

@@ -85,9 +85,8 @@
                   </BeginStoryboard>
                </Trigger.EnterActions>
             </Trigger>
-
          </Style.Triggers>
-
+         
       </Style>
        
        
