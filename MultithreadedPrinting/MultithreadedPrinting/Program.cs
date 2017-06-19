@@ -43,6 +43,22 @@ namespace MultithreadedPrinting {
             Thread.Sleep(100 * r.Next(5)); 
          }
 
+         // using the thread safe class 
+         TSafePrinter p3 = new TSafePrinter();
+         Thread[] threads3 = new Thread[10];
+         for (int i = 0; i < threads3.Length; i++) {
+            threads3[i] =
+               new Thread(new ThreadStart(p3.PrintNumbers));
+            threads3[i].Name = string.Format("Worker thread #{0}", i);
+         }
+         // start each thread 
+         foreach (Thread t in threads3) {
+            t.Start();
+            Random r = new Random();
+            Thread.Sleep(100 * r.Next(5));
+         }
+
+
 
       }
    }
