@@ -252,8 +252,14 @@ namespace WpfControlAndAPI {
       string infoStr = null; 
 
       foreach (var item in selecteRows) {
-        infoStr += ((Car)(item)).ToString() + "\n";
-        MessageBox.Show(infoStr);
+        try {
+          infoStr += ((Car)(item)).ToString() + "\n";
+          MessageBox.Show(infoStr);
+        }
+        catch (Exception) {
+          MessageBox.Show("Invalid Selection");
+          
+        }
      
       }
     }
