@@ -11,10 +11,10 @@ namespace WpfAllCode {
     [STAThread]
     static void Main(string[] args) {
       Program app = new Program();
-      app.Startup += App_Startup;
-      app.Exit += App_Exit;
-      var wnds = app.Windows;
-      app.Run();
+         app.Startup += App_Startup;
+         app.Exit += App_Exit;
+         var wnds = app.Windows;
+         app.Run();         
     }
 
     /* Remarks: On closing the main window: by calling Close() method
