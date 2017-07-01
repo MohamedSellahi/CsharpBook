@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace SimpleDataSet {
    class Program {
@@ -21,6 +23,47 @@ namespace SimpleDataSet {
          //ManipulateDataRowState();
          PrintDataSet(carsInventoryDS);
 
+         //
+         Console.WriteLine("\n***** Using Data Reader *******");
+         PrintTable(carsInventoryDS.Tables[0]);
+
+         // save data set as xml 
+         SaveAndLoadAsXml(carsInventoryDS);
+
+         // Serialize as binary format 
+         SaveAndLoadAsBinary(carsInventoryDS);
+
+      }
+
+      private static void SaveAndLoadAsBinary(DataSet ds) {
+         // set binary serializtion flag 
+         ds.RemotingFormat = SerializationFormat.Binary;
+
+         // Save this DataSet as binary 
+         FileStream fs = new FileStream("BinaryCars.bin", FileMode.Create);
+         BinaryFormatter bFormat = new BinaryFormatter();
+         bFormat.Serialize(fs, ds);
+         fs.Close();
+
+         // Clear out DataSet
+         ds.Clear();
+
+         // Laod 
+         fs = new FileStream("BinaryCars.bin", FileMode.Open);
+         DataSet Data = (DataSet)bFormat.Deserialize(fs);
+
+      }
+
+      private static void SaveAndLoadAsXml(DataSet ds) {
+         // Save thid data set as XML
+         ds.WriteXml("carsDataSet.xml");
+         ds.WriteXmlSchema("carsDataSet.xsd");
+
+         // Clear out data set 
+         ds.Clear();
+
+         // load data set from xml 
+         ds.ReadXml("carsDataSet.xml");
       }
 
       private static void PrintDataSet(DataSet ds) {
@@ -87,7 +130,7 @@ namespace SimpleDataSet {
          carRow[3] = "Sea Breeze";
          inventoryTable.Rows.Add(carRow);
 
-         // mak the primary key of this table 
+         // make the primary key of this table 
          inventoryTable.PrimaryKey = new DataColumn[] { inventoryTable.Columns[0] };
 
          // add table to data set 
@@ -124,6 +167,21 @@ namespace SimpleDataSet {
          Console.WriteLine("After calling Delete: {0}", row.RowState);
 
       }
+
+      static void PrintTable(DataTable dt) {
+         // Get the data table reader type 
+         DataTableReader dtReader = dt.CreateDataReader();
+         // the DataTableReader works just like the DataReader
+         while (dtReader.Read()) {
+            for (int i = 0; i < dtReader.FieldCount; i++) {
+               Console.Write("{0}\t", dtReader.GetValue(i).ToString().Trim());
+            }
+            Console.WriteLine();
+         }
+         dtReader.Close();
+      }
+
+
 
    }
 }

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0EA26F03-9CD0-4AE6-915F-6A5060EBF1BC}</ProjectGuid>
+    <ProjectGuid>{018F24C6-218F-4186-B2CC-2F93231DBCF7}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>SimpleDataSet</RootNamespace>
-    <AssemblyName>SimpleDataSet</AssemblyName>
+    <RootNamespace>AddWithThreadsAsync</RootNamespace>
+    <AssemblyName>AddWithThreadsAsync</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,20 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddParams.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="bin\Debug\carsDataSet.xsc">
-      <DependentUpon>carsDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="bin\Debug\carsDataSet.xss">
-      <DependentUpon>carsDataSet.xsd</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="bin\Debug\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
