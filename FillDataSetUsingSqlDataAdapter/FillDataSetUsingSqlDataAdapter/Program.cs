@@ -1,0 +1,72 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Common;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace FillDataSetUsingSqlDataAdapter {
+   class Program {
+      static void Main(string[] args) {
+         Console.WriteLine("***** Fun with DataAdapters *****");
+         string cnStr = "Integrated Security = SSPI;Initial Catalog=AutoLot" +
+            @"Data Source=(local)\SQLEXPRESS";
+         cnStr = "Data Source=(local)\\SQLEXPRESS;Integrated Security = true; Initial Catalog = AutoLot";
+
+
+         // Caller creates DataSet object 
+         DataSet ds = new DataSet("AutoLot");
+         ds.ExtendedProperties.Add("Owner", "Mohamed");
+
+         // Infor adapter of the select command and text and string
+         SqlDataAdapter dAdapt = new SqlDataAdapter("Select* From Inventory", cnStr);
+
+         // Create friendly names for the datatable
+         DataTableMapping custMap =
+            dAdapt.TableMappings.Add("Inventory", "Current Inventory");
+         custMap.ColumnMappings.Add("CarID", "Car ID");
+         custMap.ColumnMappings.Add("PetName", "Name of Car");
+
+         // Fill our DataSet with a new table, named Inventory
+         dAdapt.Fill(ds, "Inventory");
+
+         // display contents of DataSet using HElper 
+         PrintDataSet(ds);
+
+      }
+
+      private static void PrintDataSet(DataSet ds) {
+         Console.WriteLine("DataSet is named: {0}", ds.DataSetName);
+         foreach (System.Collections.DictionaryEntry de in ds.ExtendedProperties) {
+            Console.WriteLine("Key = {0}, Value = {1}", de.Key, de.Value);
+         }
+
+         foreach (DataTable dt in ds.Tables) {
+            Console.WriteLine("=> {0} Table:", dt.TableName);
+
+            // Print out the column names
+            for (int curCol = 0; curCol < dt.Columns.Count; curCol++) {
+               Console.Write(dt.Columns[curCol].ColumnName.Trim() + "\t");
+            }
+            Console.WriteLine();
+            Console.WriteLine("---------------------------------");
+            PrintTable(dt);
+         }
+      }
+
+      private static void PrintTable(DataTable dt) {
+         DataTableReader dtReader = dt.CreateDataReader();
+
+         while (dtReader.Read()) {
+
+            for (int i = 0; i < dtReader.FieldCount; i++) {
+               Console.Write("{0}\t", dtReader.GetValue(i).ToString().Trim());
+            }
+            Console.WriteLine();
+         }
+         dtReader.Close();
+      }
+   }
+}
