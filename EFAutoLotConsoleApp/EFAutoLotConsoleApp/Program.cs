@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +18,9 @@ namespace EFAutoLotConsoleApp {
          PrinAllinventoryUsingLINQ();
          Console.WriteLine("\n More on LINQ queries");
          FunWithLinqQueries();
+         RemoveRecord(8890);
+         Console.WriteLine("\nUpdatin car");
+         UpdateRecord(8888);
       }
 
 
@@ -112,8 +116,51 @@ namespace EFAutoLotConsoleApp {
             }
 
          }
+      }
 
+      private static void RemoveRecord(int carId) {
+         // find the car to delete by the primary key 
+         using (var context = new AutoLotEntities()) {
+            // see if it exists 
+            Car cartoDelete = context.Cars.Find(carId);
+            if (cartoDelete != null) {
+               context.Cars.Remove(cartoDelete);
+               context.SaveChanges();
+            }
+         }
 
+      }
+
+      private static void RemoveRecordUsingEntityState(int carId) {
+         using (var context = new AutoLotEntities()) {
+            Car carToDelete = new Car() { CarID = carId };
+            // mark this car as deleted 
+            context.Entry(carToDelete).State = System.Data.Entity.EntityState.Deleted;
+            try {
+               context.SaveChanges();
+            }
+            catch (DbUpdateConcurrencyException ex) {
+               // if the entry doesn't exist in the data base 
+               // we can see what enttites cased the exception 
+               // by examinig:  
+               //ex.Entries
+               
+               Console.WriteLine(ex);
+            }
+         }
+      }
+
+      private static void UpdateRecord(int carId) {
+         // find the car to update by primary key 
+         using (var context= new AutoLotEntities()) {
+            Car carToUpdate = context.Cars.Find(carId);
+            if (carToUpdate != null) {
+               Console.WriteLine(context.Entry(carToUpdate).State);
+               carToUpdate.Color = "Blue";
+               Console.WriteLine(context.Entry(carToUpdate).State);
+               context.SaveChanges();
+            }
+         }
       }
 
    }
