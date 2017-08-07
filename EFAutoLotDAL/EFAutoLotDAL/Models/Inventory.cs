@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema; 
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EFAutoLotDAL.Models {
 
    [Table("Inventory")]
-   public class Inventory {
+   public partial class Inventory {
 
       [Key]
       public int CarId { get; set; }
