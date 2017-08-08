@@ -7,7 +7,7 @@ using EFAutoLotDAL.Models;
 using System.Data.Entity;
 
 namespace EFAutoLotDAL.Repos {
-   class OrderRepo : BaseRepo<Order>, IRepo<Order> {
+   public class OrderRepo : BaseRepo<Order>, IRepo<Order> {
       public OrderRepo() {
          Table = Context.Orders;
       }
