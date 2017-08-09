@@ -23,6 +23,9 @@ namespace EFAutoLotDAL.Models {
       [StringLength(50)]
       public string PetName { get; set; }
 
+      [Timestamp]
+      public byte[] TimeStamp { get; set; }
+
 
       //Navigation property to account for the relation of 0-->N 
       // between a car and an order 

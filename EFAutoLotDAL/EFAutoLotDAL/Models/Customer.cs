@@ -20,6 +20,9 @@ namespace EFAutoLotDAL.Models {
       [StringLength(50)]
       public string LastName { get; set; }
 
+      [Timestamp]
+      public byte[] TimeStamp { get; set; }
+
       [NotMapped]
       public string FullName => FirstName + " " + LastName;
 

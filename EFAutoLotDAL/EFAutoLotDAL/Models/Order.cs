@@ -20,6 +20,9 @@ namespace EFAutoLotDAL.Models {
       [Required]
       public int CarId { get; set; }
 
+      [Timestamp]
+      public byte[] TimeStamp { get; set; }
+
       // navigation properties
 
       [ForeignKey("CustId")]

@@ -51,6 +51,19 @@
   <ItemGroup>
     <Compile Include="EF\AutoLotEntities.cs" />
     <Compile Include="EF\DataInitializer.cs" />
+    <Compile Include="Migrations\201708092201142_InitialCreate.cs" />
+    <Compile Include="Migrations\201708092201142_InitialCreate.Designer.cs">
+      <DependentUpon>201708092201142_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708092206103_Test.cs" />
+    <Compile Include="Migrations\201708092206103_Test.Designer.cs">
+      <DependentUpon>201708092206103_Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708092207261_TimeStamps.cs" />
+    <Compile Include="Migrations\201708092207261_TimeStamps.Designer.cs">
+      <DependentUpon>201708092207261_TimeStamps.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\CreditRisk.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Inventory.cs" />
@@ -68,6 +81,16 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201708092201142_InitialCreate.resx">
+      <DependentUpon>201708092201142_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708092206103_Test.resx">
+      <DependentUpon>201708092206103_Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708092207261_TimeStamps.resx">
+      <DependentUpon>201708092207261_TimeStamps.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

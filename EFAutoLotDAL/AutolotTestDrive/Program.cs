@@ -12,28 +12,29 @@ using System.Data.Entity.Infrastructure;
 namespace AutolotTestDrive {
    class Program {
       static void Main(string[] args) {
-         Database.SetInitializer(new DataInitializer());
+
+         //Database.SetInitializer(new DataInitializer());
          Console.WriteLine("***** Fun with ADO.NET EF Code First *****\n");
-         var car1 = new Inventory() { Maker = "Moh", Color = "Black", PetName = "Brownie" };
-         var car2 = new Inventory() { Maker = "SmartCar", Color = "Brown", PetName = "Shorty" };
+         //var car1 = new Inventory() { Maker = "Moh", Color = "Black", PetName = "Brownie" };
+         //var car2 = new Inventory() { Maker = "SmartCar", Color = "Brown", PetName = "Shorty" };
 
-         AddNewRecord(car1);
-         AddNewRecord(car1);
-         AddNewRecords(new List<Inventory>() { car1, car2 });
+         //AddNewRecord(car1);
+         //AddNewRecord(car1);
+         //AddNewRecords(new List<Inventory>() { car1, car2 });
          PrintAllInventory();
-         Console.WriteLine("----------------------------");
-         ShowAllOrders();
-         ShowAllOrdersEagerlFetched();
+         //Console.WriteLine("----------------------------");
+         //ShowAllOrders();
+         //ShowAllOrdersEagerlFetched();
 
-         Console.WriteLine("============ Cust and Risks ==========");
-         PrintAllCustiomersAndRisks();
-         var customerRepo = new CustomerRepo();
-         var customer = customerRepo.GetOne(4);
-         customerRepo.Context.Entry(customer).State = EntityState.Detached;
-         var risk = MakeCustomerARisk(customer);
-         PrintAllCustiomersAndRisks();
+         //Console.WriteLine("============ Cust and Risks ==========");
+         //PrintAllCustiomersAndRisks();
+         //var customerRepo = new CustomerRepo();
+         //var customer = customerRepo.GetOne(1);
+         //customerRepo.Context.Entry(customer).State = EntityState.Detached;
+         //var risk = MakeCustomerARisk(customer);
+         //PrintAllCustiomersAndRisks();
 
-         Console.ReadLine();
+         //Console.ReadLine();
 
 
       }
@@ -41,7 +42,7 @@ namespace AutolotTestDrive {
       private static void PrintAllInventory() {
 
          using (var repo = new InventoryRepo()) {
-            
+
             foreach (Inventory item in repo.GetAll()) {
                Console.WriteLine(item);
             }
@@ -104,14 +105,23 @@ namespace AutolotTestDrive {
                LastName = customer.LastName
             };
 
-            context.CreditRisks.Add(creditRisk);
+            // after adding index on the FirstName LastName 
+            // context.CreditRisks.Add(creditRisk);
+            // trying to add duplicate entry not possible since 
+            // we have a unique index for CreditRisk
+            var creditRiskDupe = new CreditRisk() {
+               FirstName = customer.FirstName,
+               LastName = customer.LastName
+            };
+            context.CreditRisks.Add(creditRiskDupe);
+
             try {
                context.SaveChanges();
             }
             catch (DbUpdateException ex) {
                Console.WriteLine(ex);
             }
-            catch(Exception ex) {
+            catch (Exception ex) {
                Console.WriteLine(ex);
             }
             return creditRisk;
